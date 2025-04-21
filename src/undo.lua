@@ -10,7 +10,10 @@ WindowHistory.__index = WindowHistory
 --- Creates a new WindowHistory instance.
 ---
 --- Parameters:
----  * maxSize: The maximum size of the history stack.
+---  * maxSize: The maximum size of the history stack (defaults to 10).
+---
+--- Returns:
+---  * A new WindowHistory instance
 function WindowHistory:new(maxSize)
     local instance = {
         history = {},
@@ -31,7 +34,17 @@ end
 --- Notes:
 ---  * If adding this entry exceeds the maximum history size, the oldest entry will be removed
 function WindowHistory:push(win)
-    local hist = { id = win:id(), frame = win:frame():copy() }
+    if not win then
+        self.logger.e("Window cannot be nil")
+        return
+    end
+
+    local hist = { 
+        id = win:id(), 
+        frame = win:frame():copy(),
+        app = win:application():name()
+        title = win:title(),
+    }
 
     self.logger.d(
         "Recording window history:", win:id(),
@@ -48,6 +61,8 @@ function WindowHistory:push(win)
     self.index = #self.history
 
     self.logger.d("Recorded window state:", win:id(), "@", self.index)
+
+    return self
 end
 
 --- WindowHistory:pop()
@@ -78,7 +93,7 @@ function WindowHistory:pop()
 
     self.index = self.index - 1
 
-    return hist.frame
+    return self
 end
 
 --- WindowHistory:clear()
@@ -87,7 +102,10 @@ end
 function WindowHistory:clear()
     self.history = {}
     self.index = 0
+
     self.logger.d("Cleared window history")
+
+    return self
 end
 
 return WindowHistory
