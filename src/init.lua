@@ -18,6 +18,8 @@ obj.license = "MIT"
 -- Internal Properties
 obj.logger = hs.logger.new("Snapster", "info")
 obj.hotkeys = {}
+obj.windowHistory = {}
+obj.historyIndex = 0
 
 -- Configuration
 
@@ -25,6 +27,11 @@ obj.hotkeys = {}
 --- Variable
 --- A boolean that determines whether to show an alert when a window is resized.
 obj.showAlert = true
+
+--- Snapster.maxHistorySize
+--- Variable
+--- The maximum number of window states to keep in history.
+obj.maxHistorySize = 10
 
 --- Snapster.defaults
 --- Variable
@@ -111,8 +118,8 @@ local function keyname(mods, key)
     -- Sort the modifiers for consistent naming
     table.sort(mods)
 
-    local keyname = table.concat(mods, "-")
-    return keyname:lower() .. "-" .. key:upper()
+    local name = table.concat(mods, "-")
+    return name:lower() .. "-" .. key:upper()
 end
 
 --- Snapster:getEffectiveConfig(app)
@@ -125,7 +132,7 @@ end
 --- Returns:
 ---  * A table containing the effective configuration settings for the application
 function obj:getEffectiveConfig(app)
-    local appname = app:name()
+    local appname = app and app:name() or nil
     local config = {}
     
     -- Start with defaults
@@ -143,6 +150,26 @@ function obj:getEffectiveConfig(app)
     return config
 end
 
+function obj:_recordWindowState(win)
+    local hist = { id = win:id(), frame = win:frame():copy() }
+
+    self.logger.d(
+        "Recording window history:", win:id(),
+        "@ [", hist.frame.x, ",", hist.frame.y, "]",
+        ":: (", hist.frame.w, "x", hist.frame.h, ")"
+    )
+
+    table.insert(self.windowHistory, hist)
+
+    if #self.windowHistory > self.maxHistorySize then
+        table.remove(self.windowHistory, 1)
+    end
+
+    self.historyIndex = #self.windowHistory
+
+    self.logger.d("Recorded window state:", win:id(), "@", self.historyIndex)
+end
+
 --- Snapster:_apply(layouts)
 --- Method
 --- Internal method that applies a list of layouts to the currently focused window.
@@ -157,9 +184,11 @@ function obj:_apply(layouts)
     local win = hs.window.focusedWindow()
 
     if not win then
-        self.logger.w("No focused window")
+        self.logger.w("Cannot determine current window")
         return
     end
+    
+    self:_recordWindowState(win)
 
     local frame = win:frame()
     local app = win:application()
@@ -200,20 +229,20 @@ end
 function obj:bind(mapping, ...)
     local mods = mapping[1]
     local key = mapping[2]
-    local keyname = keyname(mods, key)
+    local keyBinding = keyname(mods, key)
 
     local layouts = {...}
 
     -- Clean up existing hotkey if it exists
-    if self.hotkeys[keyname] then
-        self.logger.w("Hotkey", keyname, "exists. Replacing.")
-        self.hotkeys[keyname]:delete()
+    if self.hotkeys[keyBinding] then
+        self.logger.w("Hotkey", keyBinding, "exists. Replacing.")
+        self.hotkeys[keyBinding]:delete()
     end
 
-    self.logger.d("Binding hotkey", keyname)
+    self.logger.d("Binding hotkey", keyBinding)
 
     -- Create the new hotkey
-    self.hotkeys[keyname] = hs.hotkey.new(mods, key, function() self:_apply(layouts) end)
+    self.hotkeys[keyBinding] = hs.hotkey.new(mods, key, function() self:_apply(layouts) end)
     
     return self
 end
@@ -230,12 +259,12 @@ end
 function obj:unbind(mapping)
     local mods = mapping[1]
     local key = mapping[2]
-    local keyname = keyname(mods, key)
+    local keyBinding = keyname(mods, key)
     
-    if self.hotkeys[keyname] then
-        self.hotkeys[keyname]:delete()
-        self.hotkeys[keyname] = nil
-        self.logger.d("Unbinding hotkey", keyname)
+    if self.hotkeys[keyBinding] then
+        self.hotkeys[keyBinding]:delete()
+        self.hotkeys[keyBinding] = nil
+        self.logger.d("Unbinding hotkey", keyBinding)
     end
     
     return self
@@ -269,6 +298,33 @@ function obj:stop()
     end
     
     self.logger.i("Snapster stopped")
+
+    return self
+end
+
+--- Snapster:undo()
+--- Method
+--- Undoes the last window operation, restoring the previous window state.
+---
+--- Returns:
+---  * The Snapster object
+function obj:undo()
+    if self.historyIndex < 1 then
+        hs.alert.show("Reached end of history")
+        return self
+    end
+
+    local hist = self.windowHistory[self.historyIndex]
+    local win = hs.window.find(hist.id)
+
+    if win then
+        self.logger.d("Reverting window state [", hist.id, "] ::", self.historyIndex)
+        win:setFrame(hist.frame)
+    else
+        self.logger.w("Window no longer exists [", hist.id, "]")
+    end
+
+    self.historyIndex = self.historyIndex - 1
 
     return self
 end

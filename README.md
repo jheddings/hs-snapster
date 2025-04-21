@@ -59,6 +59,9 @@ snap:bind({{"ctrl", "alt", "cmd"}, "F"}, snap.scale.fullScreen)
 -- Resize windows based on preferred size in snap.apps
 snap:bind({{"ctrl", "alt", "cmd"}, "Y"}, snap.resize.config)
 
+-- Undo the last window operation
+hs.hotkey.bind({"ctrl", "alt", "cmd"}, "L", function() snap:undo() end)
+
 -- Start the spoon
 snap:start()
 ```
@@ -76,6 +79,13 @@ spoon.Snapster.defaults = {
   minimumWidth = nil,   -- Minimum allowed window width
   minimumHeight = nil,  -- Minimum allowed window height
 }
+```
+
+### Window Histoer
+
+```lua
+-- Set the number of entries to retain for the 'undo' operation (defaults to 10).
+spoon.Snapster.maxWindowHistory = 5
 ```
 
 ### Predefined Layouts
@@ -117,16 +127,9 @@ Snapster comes with several predefined layouts:
 - `start()`: Enable all hotkeys
 - `stop()`: Disable all hotkeys
 
-### Variables
-
-- `showAlert`: Show alert with window dimensions after resizing (default: true)
-- `defaults`: Default window settings
-- `apps`: Application-specific settings
-
 ## Building from Source
 
 ```sh
 make build       # Build the spoon
-make build-zip   # Create a distributable zip file
 make clean       # Remove build artifacts
 ```
