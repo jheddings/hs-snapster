@@ -42,11 +42,11 @@ spoon.Snapster.apps = {
 
 -- Set up window layouts with hotkeys
 spoon.Snapster
-  :bind({{"ctrl", "alt", "cmd"}}, "left"}, snapster.scale.halfWidth, snapster.layout.left)
-  :bind({{"ctrl", "alt", "cmd"}}, "right"}, snapster.scale.halfWidth, snapster.layout.right)
-  :bind({{"ctrl", "alt", "cmd"}}, "f"}, snapster.scale.fullScreen, snapster.layout.fullScreen)
-  :bind({{"ctrl", "alt", "cmd"}}, "m"}, snapster.resize.medium)
-  :bind({{"ctrl", "alt", "cmd"}}, "l"}, snapster.resize.large)
+  :bind({{"ctrl", "alt", "cmd"}, "left"}, snapster.scale.halfWidth, snapster.layout.left)
+  :bind({{"ctrl", "alt", "cmd"}, "right"}, snapster.scale.halfWidth, snapster.layout.right)
+  :bind({{"ctrl", "alt", "cmd"}, "f"}, snapster.scale.fullScreen, snapster.layout.fullScreen)
+  :bind({{"ctrl", "alt", "cmd"}, "m"}, snapster.resize.medium)
+  :bind({{"ctrl", "alt", "cmd"}, "l"}, snapster.resize.large)
 
 spoon.Snapster:start()
 ```
