@@ -5,6 +5,7 @@
 local FrameScaler = dofile(hs.spoons.resourcePath("scaler.lua"))
 local FrameLayout = dofile(hs.spoons.resourcePath("layout.lua"))
 local FrameResizer = dofile(hs.spoons.resourcePath("resize.lua"))
+local WindowHistory = dofile(hs.spoons.resourcePath("undo.lua"))
 
 local obj = {}
 obj.__index = obj
@@ -18,19 +19,25 @@ obj.license = "MIT"
 -- Internal Properties
 obj.logger = hs.logger.new("Snapster", "info")
 obj.hotkeys = {}
-obj.windowHistory = {}
-obj.historyIndex = 0
+obj.history = nil
 
 -- Configuration
 
 --- Snapster.showAlert
 --- Variable
 --- A boolean that determines whether to show an alert when a window is resized.
+---
+--- Notes:
+---  * The default is `true`
 obj.showAlert = true
 
 --- Snapster.maxHistorySize
 --- Variable
 --- The maximum number of window states to keep in history.
+---
+--- Notes:
+---  * The default is 10
+---  * Set to 0 to disable history
 obj.maxHistorySize = 10
 
 --- Snapster.defaults
@@ -150,26 +157,6 @@ function obj:getEffectiveConfig(app)
     return config
 end
 
-function obj:_recordWindowState(win)
-    local hist = { id = win:id(), frame = win:frame():copy() }
-
-    self.logger.d(
-        "Recording window history:", win:id(),
-        "@ [", hist.frame.x, ",", hist.frame.y, "]",
-        ":: (", hist.frame.w, "x", hist.frame.h, ")"
-    )
-
-    table.insert(self.windowHistory, hist)
-
-    if #self.windowHistory > self.maxHistorySize then
-        table.remove(self.windowHistory, 1)
-    end
-
-    self.historyIndex = #self.windowHistory
-
-    self.logger.d("Recorded window state:", win:id(), "@", self.historyIndex)
-end
-
 --- Snapster:_apply(layouts)
 --- Method
 --- Internal method that applies a list of layouts to the currently focused window.
@@ -188,7 +175,7 @@ function obj:_apply(layouts)
         return
     end
     
-    self:_recordWindowState(win)
+    self.history:push(win)
 
     local frame = win:frame()
     local app = win:application()
@@ -277,6 +264,12 @@ end
 --- Returns:
 ---  * The Snapster object
 function obj:start()
+    self.logger.d("Starting Snapster")
+
+    if self.maxHistorySize > 0 then
+        self.history = WindowHistory:new(self.maxHistorySize)
+    end
+
     for _, hotkey in pairs(self.hotkeys) do
         hotkey:enable()
     end
@@ -293,10 +286,17 @@ end
 --- Returns:
 ---  * The Snapster object
 function obj:stop()
+    self.logger.d("Stopping Snapster")
+
     for _, hotkey in pairs(self.hotkeys) do
         hotkey:disable()
     end
     
+    if self.history then
+        self.history:clear()
+        self.history = 0
+    end
+
     self.logger.i("Snapster stopped")
 
     return self
@@ -309,23 +309,7 @@ end
 --- Returns:
 ---  * The Snapster object
 function obj:undo()
-    if self.historyIndex < 1 then
-        hs.alert.show("Reached end of history")
-        return self
-    end
-
-    local hist = self.windowHistory[self.historyIndex]
-    local win = hs.window.find(hist.id)
-
-    if win then
-        self.logger.d("Reverting window state [", hist.id, "] ::", self.historyIndex)
-        win:setFrame(hist.frame)
-    else
-        self.logger.w("Window no longer exists [", hist.id, "]")
-    end
-
-    self.historyIndex = self.historyIndex - 1
-
+    self.history:pop()
     return self
 end
 
