@@ -21,35 +21,34 @@ Snapster is a Hammerspoon spoon that helps arrange windows on macOS. It provides
 hs.loadSpoon("Snapster")
 ```
 
-Alternatively, you can build from source:
-
-```sh
-git clone <repository-url>
-cd hs-snapster
-make build
-cp -r build/Snapster.spoon ~/.hammerspoon/Spoons/
-```
+Alternatively, you can build from source.
 
 ## Basic Usage
 
 ```lua
 -- Load the spoon
-local snapster = hs.loadSpoon("Snapster")
+hs.loadSpoon("Snapster")
+
+-- Set your window defaults
+spoon.Snapster.defaults = {
+  maximumWidth = 2000,
+}
+
+-- Configure application-specific settings
+spoon.Snapster.apps = {
+  ["Google Chrome"] = {width = 1280, height = 900},
+  ["Code"] = {minimumWidth = 1600},
+}
 
 -- Set up window layouts with hotkeys
-snapster
+spoon.Snapster
   :bind({{"ctrl", "alt", "cmd"}}, "left"}, snapster.scale.halfWidth, snapster.layout.left)
   :bind({{"ctrl", "alt", "cmd"}}, "right"}, snapster.scale.halfWidth, snapster.layout.right)
   :bind({{"ctrl", "alt", "cmd"}}, "f"}, snapster.scale.fullScreen, snapster.layout.fullScreen)
   :bind({{"ctrl", "alt", "cmd"}}, "m"}, snapster.resize.medium)
   :bind({{"ctrl", "alt", "cmd"}}, "l"}, snapster.resize.large)
-  :start()
 
--- Configure application-specific settings
-snapster.apps = {
-  ["Google Chrome"] = {width = 1280, height = 900},
-  ["Code"] = {minimumWidth = 1600},
-}
+spoon.Snapster:start()
 ```
 
 ## Configuration
@@ -57,7 +56,7 @@ snapster.apps = {
 ### Default Settings
 
 ```lua
-snapster.defaults = {
+spoon.Spanster.defaults = {
   width = nil,          -- Default window width (in pixels)
   height = nil,         -- Default window height (in pixels)
   maximumWidth = nil,   -- Maximum allowed window width
@@ -104,16 +103,12 @@ Snapster comes with several predefined layouts:
 - `unbind(mapping)`: Remove a hotkey binding
 - `start()`: Enable all hotkeys
 - `stop()`: Disable all hotkeys
-- `getEffectiveConfig(app)`: Get configuration for an application
 
 ### Variables
 
 - `showAlert`: Show alert with window dimensions after resizing (default: true)
 - `defaults`: Default window settings
 - `apps`: Application-specific settings
-- `scale`: Predefined scaling factors
-- `layout`: Predefined window layouts
-- `resize`: Predefined window sizes
 
 ## Building from Source
 
@@ -122,11 +117,3 @@ make build       # Build the spoon
 make build-zip   # Create a distributable zip file
 make clean       # Remove build artifacts
 ```
-
-## License
-
-MIT License - See source code for details.
-
-## Author
-
-Jason Heddings
