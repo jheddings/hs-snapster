@@ -106,6 +106,7 @@ Snapster comes with several predefined layouts:
 - `snapster.resize.medium` - XGA resolution (1024x768)
 - `snapster.resize.large` - SXGA resolution (1280x1024)
 - `snapster.resize.xlarge` - WUXGA resolution (1920x1200)
+- `snapster.resize.config` - Configure according to preferred size
 
 ## API
 
