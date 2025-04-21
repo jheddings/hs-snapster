@@ -15,7 +15,7 @@ Snapster is a Hammerspoon spoon that helps arrange windows on macOS. It provides
 1. Download the latest release from the project's release page
 2. Unzip the archive
 3. Double-click `Snapster.spoon`
-4. Add the following to your [`build/Snapster.spoon/init.lua`](build/Snapster.spoon/init.lua ):
+4. Add the following to your `~/.hammerspoon/init.lua`:
 
 ```lua
 hs.loadSpoon("Snapster")
@@ -42,7 +42,7 @@ snap.apps = {
 }
 
 -- Setup key binding for half screen layouts
-snap:bind({{"ctrl", "alt", "cmd"}, "left"}, snap.scale.halfWidth, snapster.layout.left)
+snap:bind({{"ctrl", "alt", "cmd"}, "left"}, snap.scale.halfWidth, snap.layout.left)
 snap:bind({{"ctrl", "alt", "cmd"}, "right"}, snap.scale.halfWidth, snap.layout.right)
 snap:bind({{"ctrl", "alt", "cmd"}, "up"}, snap.scale.halfHeight, snap.layout.top)
 snap:bind({{"ctrl", "alt", "cmd"}, "down"}, snap.scale.halfHeight, snap.layout.bottom)
