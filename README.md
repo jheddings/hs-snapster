@@ -28,27 +28,39 @@ Alternatively, you can build from source.
 ```lua
 -- Load the spoon
 hs.loadSpoon("Snapster")
+local snap = spoon.Snapster
 
 -- Set your window defaults
-spoon.Snapster.defaults = {
+snap.defaults = {
   maximumWidth = 2000,
 }
 
 -- Configure application-specific settings
-spoon.Snapster.apps = {
+snap.apps = {
   ["Google Chrome"] = {width = 1280, height = 900},
   ["Code"] = {minimumWidth = 1600},
 }
 
--- Set up window layouts with hotkeys
-spoon.Snapster
-  :bind({{"ctrl", "alt", "cmd"}, "left"}, snapster.scale.halfWidth, snapster.layout.left)
-  :bind({{"ctrl", "alt", "cmd"}, "right"}, snapster.scale.halfWidth, snapster.layout.right)
-  :bind({{"ctrl", "alt", "cmd"}, "f"}, snapster.scale.fullScreen, snapster.layout.fullScreen)
-  :bind({{"ctrl", "alt", "cmd"}, "m"}, snapster.resize.medium)
-  :bind({{"ctrl", "alt", "cmd"}, "l"}, snapster.resize.large)
+-- Setup key binding for half screen layouts
+snap:bind({{"ctrl", "alt", "cmd"}, "left"}, snap.scale.halfWidth, snapster.layout.left)
+snap:bind({{"ctrl", "alt", "cmd"}, "right"}, snap.scale.halfWidth, snap.layout.right)
+snap:bind({{"ctrl", "alt", "cmd"}, "up"}, snap.scale.halfHeight, snap.layout.top)
+snap:bind({{"ctrl", "alt", "cmd"}, "down"}, snap.scale.halfHeight, snap.layout.bottom)
 
-spoon.Snapster:start()
+-- Setup key binding for quarter screen layouts
+snap:bind({{"ctrl", "alt", "cmd"}, "U"}, snap.scale.quarterScreen, snap.layout.topLeft)
+snap:bind({{"ctrl", "alt", "cmd"}, "I"}, snap.scale.quarterScreen, snap.layout.topRight)
+snap:bind({{"ctrl", "alt", "cmd"}, "J"}, snap.scale.quarterScreen, snap.layout.bottomLeft)
+snap:bind({{"ctrl", "alt", "cmd"}, "K"}, snap.scale.quarterScreen, snap.layout.bottomRight)
+
+-- Setup key binding for full screen layout
+snap:bind({{"ctrl", "alt", "cmd"}, "F"}, snap.scale.fullScreen)
+
+-- Resize windows based on preferred size in snap.apps
+snap:bind({{"ctrl", "alt", "cmd"}, "Y"}, snap.resize.config)
+
+-- Start the spoon
+snap:start()
 ```
 
 ## Configuration
@@ -56,7 +68,7 @@ spoon.Snapster:start()
 ### Default Settings
 
 ```lua
-spoon.Spanster.defaults = {
+spoon.Snapster.defaults = {
   width = nil,          -- Default window width (in pixels)
   height = nil,         -- Default window height (in pixels)
   maximumWidth = nil,   -- Maximum allowed window width
