@@ -36,7 +36,12 @@ static-checks:
 
 .PHONY: unit-tests
 unit-tests:
-	@echo "Unit tests passed."
+	for test in $(BASEDIR)/tests/test_*.lua; do lua "$$test"; done
+
+
+.PHONY: integration-tests
+integration-tests:
+	for test in $(BASEDIR)/tests/hs_*.lua; do hs "$$test"; done
 
 
 .PHONY: preflight
@@ -45,8 +50,8 @@ preflight: static-checks unit-tests
 
 
 .PHONY: test
-test: unit-tests
-	hs "$(BASEDIR)/tests/ztest.lua"
+test: unit-tests integration-tests
+	@echo "All tests passed."
 
 
 .PHONY: clean
