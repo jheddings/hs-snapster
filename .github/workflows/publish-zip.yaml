@@ -1,0 +1,23 @@
+name: Publish zip file to GitHub Releases
+
+"on":
+  push:
+    tags: ["v*.*"]
+
+jobs:
+  zip-publish:
+    name: Publish zipfile
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Make zipfile
+        run: |
+          make zip
+
+      - name: Upload zipfile
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.zip

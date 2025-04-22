@@ -29,6 +29,12 @@ build-docs: preflight
 build: build-docs build-zip
 
 
+.PHONY: release
+release: preflight
+	git tag "v$(APPVER)" main
+	git push origin "v$(APPVER)"
+
+
 .PHONY: static-checks
 static-checks:
 	@echo "Static checks passed."
@@ -44,14 +50,14 @@ integration-tests:
 	for test in $(BASEDIR)/tests/hs_*.lua; do hs "$$test"; done
 
 
-.PHONY: preflight
-preflight: static-checks unit-tests
-	@echo "Preflight checks passed."
-
-
 .PHONY: test
 test: unit-tests integration-tests
 	@echo "All tests passed."
+
+
+.PHONY: preflight
+preflight: static-checks unit-tests
+	@echo "Preflight checks passed."
 
 
 .PHONY: clean
