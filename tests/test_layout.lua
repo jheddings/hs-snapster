@@ -82,8 +82,8 @@ function TestFrameLayout:testTopLeftCorner()
     local layout = FrameLayout:new("left", "top")
     local frame = layout:apply(self.mockWindow)
 
-    lu.assertEquals(frame.x, 0)
-    lu.assertEquals(frame.y, 0)
+    lu.assertEquals(frame.x, 0)     -- Left edge of screen
+    lu.assertEquals(frame.y, 0)     -- Top edge of screen
 end
 
 function TestFrameLayout:testBottomRightCorner()
