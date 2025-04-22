@@ -42,8 +42,8 @@ function WindowHistory:push(win)
     local hist = { 
         id = win:id(), 
         frame = win:frame():copy(),
-        app = win:application():name()
-        title = win:title(),
+        app = win:application():name(),
+        title = win:title()
     }
 
     self.logger.d(
