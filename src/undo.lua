@@ -60,7 +60,7 @@ function WindowHistory:push(win)
 
     self.index = #self.history
 
-    self.logger.d("Recorded window state:", win:id(), "@", self.index)
+    self.logger.v("Recorded window state:", win:id(), "@", self.index)
 
     return self
 end
@@ -77,7 +77,7 @@ end
 ---  * Handles cases where the original window no longer exists
 function WindowHistory:pop()
     if self.index < 1 then
-        hs.alert.show("Reached end of history")
+        hs.alert.show("End of window history")
         return nil
     end
 
