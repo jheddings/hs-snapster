@@ -3,7 +3,7 @@
 --- Snapster is a Hammerspoon spoon that helps arrange windows on macOS.
 
 local FrameScaler = dofile(hs.spoons.resourcePath("scaler.lua"))
-local FrameLayout = dofile(hs.spoons.resourcePath("layout.lua"))
+local ScreenAnchor = dofile(hs.spoons.resourcePath("anchor.lua"))
 local FrameResizer = dofile(hs.spoons.resourcePath("resize.lua"))
 local WindowHistory = dofile(hs.spoons.resourcePath("undo.lua"))
 
@@ -12,7 +12,7 @@ obj.__index = obj
 
 -- Metadata
 obj.name = "Snapster"
-obj.version = "1.2"
+obj.version = "1.3"
 obj.author = "Jason Heddings"
 obj.license = "MIT"
 
@@ -79,19 +79,19 @@ obj.scale = {
     quarterScreen = FrameScaler.QUARTER_SCREEN,
 }
 
---- Snapster.layout
+--- Snapster.anchor
 --- Variable
---- A table of predefined window layouts.
-obj.layout = {
-    left = FrameLayout.LEFT_HALF,
-    right = FrameLayout.RIGHT_HALF,
-    top = FrameLayout.TOP_HALF,
-    bottom = FrameLayout.BOTTOM_HALF,
-    topLeft = FrameLayout.TOP_LEFT,
-    bottomLeft = FrameLayout.BOTTOM_LEFT,
-    topRight = FrameLayout.TOP_RIGHT,
-    bottomRight = FrameLayout.BOTTOM_RIGHT,
-    fullScreen = FrameLayout.FULL_SCREEN
+--- A table of predefined screen anchors.
+obj.anchor = {
+    left = ScreenAnchor.LEFT_SIDE,
+    right = ScreenAnchor.RIGHT_SIDE,
+    top = ScreenAnchor.TOP_OF_SCREEN,
+    bottom = ScreenAnchor.BOTTOM_OF_SCREEN,
+    topLeft = ScreenAnchor.TOP_LEFT,
+    bottomLeft = ScreenAnchor.BOTTOM_LEFT,
+    topRight = ScreenAnchor.TOP_RIGHT,
+    bottomRight = ScreenAnchor.BOTTOM_RIGHT,
+    fullScreen = ScreenAnchor.FULL_SCREEN
 }
 
 --- Snapster.resize
