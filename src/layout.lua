@@ -1,10 +1,24 @@
 --- LayoutManager
 --- Class
---- Intelligently applies multiple layout operations in the correct order
+--- Manages and applies multiple window layout operations in sequence.
+---
+--- The LayoutManager coordinates multiple layout operations (like resizing, 
+--- positioning, or anchoring) to be applied to a window in the proper order.
+--- Each operation must implement an `apply(win)` method that takes a window
+--- and returns a modified frame.
 
 LayoutManager = {}
 LayoutManager.__index = LayoutManager
 
+--- LayoutManager:new(...)
+--- Method
+--- Creates a new LayoutManager instance.
+---
+--- Parameters:
+---  * ... - Zero or more layout operation objects, each must implement an apply(win) method
+---
+--- Returns:
+---  * A new LayoutManager instance
 function LayoutManager:new(...)
     local instance = {
         operations = {...}
@@ -15,6 +29,16 @@ end
 --- LayoutManager:apply(win)
 --- Method
 --- Applies the layout operations to the specified window.
+---
+--- Parameters:
+---  * win - An hs.window object to apply the layout operations to
+---
+--- Returns:
+---  * The final frame after all operations have been applied
+---
+--- Notes:
+---  * Each layout operation is called in sequence
+---  * The window frame is only set once after all operations are complete
 function LayoutManager:apply(win)
     local frame = win:frame()
     local app = win:application()
