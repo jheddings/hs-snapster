@@ -2,11 +2,11 @@
 ---
 --- Snapster is a Hammerspoon spoon that helps arrange windows on macOS.
 
+local LayoutManager = dofile(hs.spoons.resourcePath("layout.lua"))
 local FrameScaler = dofile(hs.spoons.resourcePath("scaler.lua"))
 local ScreenAnchor = dofile(hs.spoons.resourcePath("anchor.lua"))
 local FrameResizer = dofile(hs.spoons.resourcePath("resize.lua"))
 local WindowHistory = dofile(hs.spoons.resourcePath("undo.lua"))
-local LayoutManager = dofile(hs.spoons.resourcePath("layout.lua"))
 
 local obj = {}
 obj.__index = obj
@@ -182,8 +182,6 @@ function obj:_apply(layout)
 
     local frame = layout:apply(win)
 
-    logger.i("Moved", appname, "to (", frame.w, "x", frame.h, ") @ [", frame.x, ",", frame.y, "]") 
-
     if self.showAlert then
         hs.alert.show(appname .. " (" .. frame.w .. "x" .. frame.h .. ")")
     end
@@ -197,7 +195,7 @@ end
 ---  * mapping - A table {mods, key} defining the hotkey
 ---  * ... - A list of layout operations to apply
 ---
---- Remarks:
+--- Notes:
 ---  * The layout operations will be applied in the order they are provided.
 function obj:bind(mapping, ...)
     local mods = mapping[1]

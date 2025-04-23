@@ -43,11 +43,13 @@ static-checks:
 .PHONY: unit-tests
 unit-tests:
 	for test in $(BASEDIR)/tests/test_*.lua; do lua "$$test"; done
+	@echo "Unit tests complete."
 
 
 .PHONY: integration-tests
 integration-tests:
 	for test in $(BASEDIR)/tests/hs_*.lua; do hs "$$test"; done
+	@echo "Integration tests complete."
 
 
 .PHONY: test

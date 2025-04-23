@@ -2,7 +2,7 @@
 --- Class
 --- Methods for anchoring windows to screen locations.
 
-ScreenAnchor = {}
+ScreenAnchor = LayoutOperation:new()
 ScreenAnchor.__index = ScreenAnchor
 
 local ANCHOR_LEFT = "left"
@@ -13,6 +13,9 @@ local ANCHOR_BOTTOM = "bottom"
 --- ScreenAnchor:new(...)
 --- Method
 --- Creates a new ScreenAnchor instance with the specified anchors.
+---
+--- Parameters:
+---  * ... - Zero or more anchor strings (left, right, top, bottom)
 function ScreenAnchor:new(...)
     local instance = {
         anchors = {...}
@@ -20,12 +23,18 @@ function ScreenAnchor:new(...)
     return setmetatable(instance, self)
 end
 
---- ScreenAnchor:apply(win)
+--- ScreenAnchor:apply(frame, context)
 --- Method
---- Applies the anchors to the specified window.
-function ScreenAnchor:apply(win)
-    local frame = win:frame()
-    local screen = win:screen()
+--- Applies the anchors to the specified window frame.
+---
+--- Parameters:
+---  * frame - The window frame to anchor
+---  * context - The context object containing the application information
+---
+--- Returns:
+---  * The modified frame with applied anchors
+function ScreenAnchor:apply(frame, context)
+    local screen = context:screen()
     local max = screen:frame()
 
     local logger = spoon.Snapster.logger

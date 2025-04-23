@@ -5,12 +5,12 @@
 WindowHistory = {}
 WindowHistory.__index = WindowHistory
 
---- WindowHistory:new(...)
+--- WindowHistory:new(maxSize)
 --- Method
 --- Creates a new WindowHistory instance.
 ---
 --- Parameters:
----  * maxSize: The maximum size of the history stack (defaults to 10).
+---  * maxSize - The maximum size of the history stack (defaults to 10).
 ---
 --- Returns:
 ---  * A new WindowHistory instance
@@ -30,6 +30,9 @@ end
 ---
 --- Parameters:
 ---  * win - An hs.window object to record the state of
+---
+--- Returns:
+---  * The WindowHistory object for method chaining
 ---
 --- Notes:
 ---  * If adding this entry exceeds the maximum history size, the oldest entry will be removed
@@ -70,7 +73,7 @@ end
 --- Restores a window to its previous state from the history stack.
 ---
 --- Returns:
----  * The frame that was applied, or nil if history is empty
+---  * The WindowHistory object for method chaining
 ---
 --- Notes:
 ---  * Displays an alert if there's no more history to restore
@@ -99,6 +102,9 @@ end
 --- WindowHistory:clear()
 --- Method
 --- Resets the window history, removing all stored states.
+---
+--- Returns:
+---  * The WindowHistory object for method chaining
 function WindowHistory:clear()
     self.history = {}
     self.index = 0

@@ -2,12 +2,20 @@
 --- Class
 --- Handles resizing of window frames based on a configuration.
 
-FrameResizer = {}
-FrameResizer.__index = FrameResizer
-
---- FrameResizer:new(...)
+--- FrameResizer:new(width, height)
 --- Method
 --- Creates a new FrameResizer instance.
+---
+--- Parameters:
+---  * width - (optional) The fixed width to apply to windows
+---  * height - (optional) The fixed height to apply to windows
+---
+--- Returns:
+---  * A new FrameResizer instance
+
+FrameResizer = LayoutOperation:new()
+FrameResizer.__index = FrameResizer
+
 function FrameResizer:new(width, height)
     local instance = {
         width = width or nil,
@@ -16,15 +24,21 @@ function FrameResizer:new(width, height)
     return setmetatable(instance, self)
 end
 
---- FrameResizer:apply(win)
+--- FrameResizer:apply(frame, context)
 --- Method
---- Applies the resizing to the specified window.
+--- Applies the resizing to the specified window frame.
 ---
---- Remarks:
+--- Parameters:
+---  * frame - The window frame to resize
+---  * context - The context object containing the application information
+---
+--- Returns:
+---  * The modified frame
+---
+--- Notes:
 ---  * The resizing is based on the effective configuration of the application.
-function FrameResizer:apply(win)
-    local frame = win:frame()
-    local app = win:application()
+function FrameResizer:apply(frame, context)
+    local app = context:application()
 
     local logger = spoon.Snapster.logger
     local config = spoon.Snapster:getEffectiveConfig(app)
