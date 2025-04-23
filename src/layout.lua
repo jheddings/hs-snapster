@@ -49,6 +49,9 @@ function LayoutManager:apply(win)
     logger.d("Begin layout:", appname, "[", win:title(), "]")
     logger.d("  => (", frame.w, "x", frame.h, ") @ [", frame.x, ",", frame.y, "]")
 
+    -- TODO look for a better way to chain operations; specifically, each operation
+    -- needs the current state of the window, including the current frame values
+
     for _, layout in ipairs(self.operations) do
         frame = layout:apply(win)
         win:setFrame(frame)
