@@ -6,6 +6,7 @@ local FrameScaler = dofile(hs.spoons.resourcePath("scaler.lua"))
 local ScreenAnchor = dofile(hs.spoons.resourcePath("anchor.lua"))
 local FrameResizer = dofile(hs.spoons.resourcePath("resize.lua"))
 local WindowHistory = dofile(hs.spoons.resourcePath("undo.lua"))
+local LayoutManager = dofile(hs.spoons.resourcePath("layout.lua"))
 
 local obj = {}
 obj.__index = obj
@@ -167,8 +168,10 @@ end
 --- Notes:
 ---  * Each layout object in the list must have an apply() method that takes a window object
 ---  * If showAlert is true, displays an alert with the window dimensions after applying layouts
-function obj:_apply(layouts)
+function obj:_apply(layout)
     local win = hs.window.focusedWindow()
+    local app = win:application()
+    local appname = app and app:name() or win:title()
 
     if not win then
         self.logger.w("Cannot determine current window")
@@ -177,30 +180,11 @@ function obj:_apply(layouts)
     
     self.history:push(win)
 
-    local frame = win:frame()
-    local app = win:application()
-    local appname = app and app:name() or win:title()
-
-    self.logger.d("Begin layout:", appname, "[", win:title(), "]")
-    self.logger.d("  => (", frame.w, "x", frame.h, ") @ [", frame.x, ",", frame.y, "]")
-
-    for _, layout in ipairs(layouts) do
-        frame = layout:apply(win)
-        win:setFrame(frame)
-    end
-
-    self.logger.i(
-        "Moving", appname,
-        "to (", frame.w, "x", frame.h,
-        ") @ [", frame.x, ",", frame.y, "]"
-    ) 
+    local frame = layout:apply(win)
 
     if self.showAlert then
         hs.alert.show(appname .. " (" .. frame.w .. "x" .. frame.h .. ")")
     end
-
-    self.logger.d("Layout complete:", appname, "[", win:title(), "]")
-    self.logger.d("  => (", frame.w, "x", frame.h, ") @ [", frame.x, ",", frame.y, "]")
 end
 
 --- Snapster:bind(mapping, width, height, anchors)
@@ -218,7 +202,7 @@ function obj:bind(mapping, ...)
     local key = mapping[2]
     local keyBinding = keyname(mods, key)
 
-    local layouts = {...}
+    local mgr = LayoutManager:new(...)
 
     -- Clean up existing hotkey if it exists
     if self.hotkeys[keyBinding] then
@@ -229,7 +213,9 @@ function obj:bind(mapping, ...)
     self.logger.d("Binding hotkey", keyBinding)
 
     -- Create the new hotkey
-    self.hotkeys[keyBinding] = hs.hotkey.new(mods, key, function() self:_apply(layouts) end)
+    self.hotkeys[keyBinding] = hs.hotkey.new(
+        mods, key, function() self:_apply(mgr) end
+    )
     
     return self
 end
