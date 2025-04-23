@@ -22,7 +22,7 @@ end
 
 --- ScreenAnchor:apply(win)
 --- Method
---- Applies the layout to the specified window.
+--- Applies the anchors to the specified window.
 function ScreenAnchor:apply(win)
     local frame = win:frame()
     local screen = win:screen()
@@ -57,47 +57,47 @@ end
 
 --- ScreenAnchor.LEFT_SIDE
 --- Variable
---- Predefined layout for the left side of the screen.
+--- Predefined anchors for the left side of the screen.
 ScreenAnchor.LEFT_SIDE = ScreenAnchor:new(ANCHOR_LEFT, ANCHOR_TOP, ANCHOR_BOTTOM)
 
 --- ScreenAnchor.RIGHT_SIDE
 --- Variable
---- Predefined layout for the right side of the screen.
+--- Predefined anchors for the right side of the screen.
 ScreenAnchor.RIGHT_SIDE = ScreenAnchor:new(ANCHOR_RIGHT, ANCHOR_TOP, ANCHOR_BOTTOM)
 
 --- ScreenAnchor.TOP_OF_SCREEN
 --- Variable
---- Predefined layout for the top of the screen.
+--- Predefined anchors for the top of the screen.
 ScreenAnchor.TOP_OF_SCREEN = ScreenAnchor:new(ANCHOR_TOP, ANCHOR_LEFT, ANCHOR_RIGHT)
 
 --- ScreenAnchor.BOTTOM_OF_SCREEN
 --- Variable
---- Predefined layout for the bottom of the screen.
+--- Predefined anchors for the bottom of the screen.
 ScreenAnchor.BOTTOM_OF_SCREEN = ScreenAnchor:new(ANCHOR_BOTTOM, ANCHOR_LEFT, ANCHOR_RIGHT)
 
 --- ScreenAnchor.TOP_LEFT
 --- Variable
---- Predefined layout for the top left corner of the screen.
+--- Predefined anchors for the top left corner of the screen.
 ScreenAnchor.TOP_LEFT = ScreenAnchor:new(ANCHOR_TOP, ANCHOR_LEFT)
 
 --- ScreenAnchor.BOTTOM_LEFT
 --- Variable
---- Predefined layout for the bottom left corner of the screen.
+--- Predefined anchors for the bottom left corner of the screen.
 ScreenAnchor.BOTTOM_LEFT = ScreenAnchor:new(ANCHOR_BOTTOM, ANCHOR_LEFT)
 
 --- ScreenAnchor.TOP_RIGHT
 --- Variable
---- Predefined layout for the top right corner of the screen.
+--- Predefined anchors for the top right corner of the screen.
 ScreenAnchor.TOP_RIGHT = ScreenAnchor:new(ANCHOR_TOP, ANCHOR_RIGHT)
 
 --- ScreenAnchor.BOTTOM_RIGHT
 --- Variable
---- Predefined layout for the bottom right corner of the screen.
+--- Predefined anchors for the bottom right corner of the screen.
 ScreenAnchor.BOTTOM_RIGHT = ScreenAnchor:new(ANCHOR_BOTTOM, ANCHOR_RIGHT)
 
 --- ScreenAnchor.FULL_SCREEN
 --- Variable
---- Predefined layout for the full screen.
+--- Predefined anchors for the full screen.
 ScreenAnchor.FULL_SCREEN = ScreenAnchor:new(ANCHOR_LEFT, ANCHOR_RIGHT, ANCHOR_TOP, ANCHOR_BOTTOM)
 
 return ScreenAnchor
