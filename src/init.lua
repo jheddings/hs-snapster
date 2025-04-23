@@ -170,14 +170,15 @@ end
 ---  * If showAlert is true, displays an alert with the window dimensions after applying layouts
 function obj:_apply(layout)
     local win = hs.window.focusedWindow()
-    local app = win:application()
-    local appname = app and app:name() or win:title()
 
     if not win then
         self.logger.w("Cannot determine current window")
         return
     end
     
+    local app = win:application()
+    local appname = app and app:name() or win:title()
+
     self.history:push(win)
 
     local frame = layout:apply(win)
@@ -280,7 +281,7 @@ function obj:stop()
     
     if self.history then
         self.history:clear()
-        self.history = 0
+        self.history = nil
     end
 
     self.logger.i("Snapster stopped")
