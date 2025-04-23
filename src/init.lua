@@ -182,6 +182,8 @@ function obj:_apply(layout)
 
     local frame = layout:apply(win)
 
+    logger.i("Moved", appname, "to (", frame.w, "x", frame.h, ") @ [", frame.x, ",", frame.y, "]") 
+
     if self.showAlert then
         hs.alert.show(appname .. " (" .. frame.w .. "x" .. frame.h .. ")")
     end

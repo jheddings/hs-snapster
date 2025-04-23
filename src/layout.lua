@@ -54,10 +54,6 @@ function LayoutManager:apply(win)
         win:setFrame(frame)
     end
 
-    logger.i("Moving", appname, "to (", frame.w, "x", frame.h, ") @ [", frame.x, ",", frame.y, "]") 
-
-    win:setFrame(frame)
-
     logger.d("Layout complete:", appname, "[", win:title(), "]")
     logger.d("  => (", frame.w, "x", frame.h, ") @ [", frame.x, ",", frame.y, "]")
 
