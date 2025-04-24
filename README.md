@@ -42,16 +42,16 @@ snap.apps = {
 }
 
 -- Setup key binding for half screen layouts
-snap:bind({{"ctrl", "alt", "cmd"}, "left"}, snap.scale.halfWidth, snap.layout.left)
-snap:bind({{"ctrl", "alt", "cmd"}, "right"}, snap.scale.halfWidth, snap.layout.right)
-snap:bind({{"ctrl", "alt", "cmd"}, "up"}, snap.scale.halfHeight, snap.layout.top)
-snap:bind({{"ctrl", "alt", "cmd"}, "down"}, snap.scale.halfHeight, snap.layout.bottom)
+snap:bind({{"ctrl", "alt", "cmd"}, "left"}, snap.scale.halfWidth, snap.anchor.left)
+snap:bind({{"ctrl", "alt", "cmd"}, "right"}, snap.scale.halfWidth, snap.anchor.right)
+snap:bind({{"ctrl", "alt", "cmd"}, "up"}, snap.scale.halfHeight, snap.anchor.top)
+snap:bind({{"ctrl", "alt", "cmd"}, "down"}, snap.scale.halfHeight, snap.anchor.bottom)
 
 -- Setup key binding for quarter screen layouts
-snap:bind({{"ctrl", "alt", "cmd"}, "U"}, snap.scale.quarterScreen, snap.layout.topLeft)
-snap:bind({{"ctrl", "alt", "cmd"}, "I"}, snap.scale.quarterScreen, snap.layout.topRight)
-snap:bind({{"ctrl", "alt", "cmd"}, "J"}, snap.scale.quarterScreen, snap.layout.bottomLeft)
-snap:bind({{"ctrl", "alt", "cmd"}, "K"}, snap.scale.quarterScreen, snap.layout.bottomRight)
+snap:bind({{"ctrl", "alt", "cmd"}, "U"}, snap.scale.quarterScreen, snap.anchor.topLeft)
+snap:bind({{"ctrl", "alt", "cmd"}, "I"}, snap.scale.quarterScreen, snap.anchor.topRight)
+snap:bind({{"ctrl", "alt", "cmd"}, "J"}, snap.scale.quarterScreen, snap.anchor.bottomLeft)
+snap:bind({{"ctrl", "alt", "cmd"}, "K"}, snap.scale.quarterScreen, snap.anchor.bottomRight)
 
 -- Setup key binding for full screen layout
 snap:bind({{"ctrl", "alt", "cmd"}, "F"}, snap.scale.fullScreen)
@@ -68,7 +68,18 @@ snap:start()
 
 ## Configuration
 
+### Show Alert
+
+Snapster will show a brief alert when windows are resized.
+
+```lua
+-- Enable a brief alert when a window is resized (defaults to true)
+spoon.Snapster.showAlert = true
+```
+
 ### Default Settings
+
+These settings apply during window operations to affect the final frame.  They may be overridden using the `spoon.Snapster.apps` configuration parameter.
 
 ```lua
 spoon.Snapster.defaults = {
@@ -81,26 +92,40 @@ spoon.Snapster.defaults = {
 }
 ```
 
-### Window Histoer
+### Application Settings
+
+These settings override the defaults per application.
 
 ```lua
--- Set the number of entries to retain for the 'undo' operation (defaults to 10).
-spoon.Snapster.maxWindowHistory = 5
+spoon.Snapster.apps = {
+  ["Google Chrome"] = {width = 1280, height = 900},
+  ["Code"] = {minimumWidth = 1600},
+}
+```
+
+### Window History
+
+The window history allows Snapster to undo operations using the `spoon.Snapster:undo()` method.
+
+```lua
+-- Set the number of entries to retain for the 'undo' operation.
+-- (defaults to 10; set at 0 to disable history)
+spoon.Snapster.maxHistorySize = 5
 ```
 
 ### Predefined Layouts
 
 Snapster comes with several predefined layouts:
 
-- `snapster.layout.left` - Left half of the screen
-- `snapster.layout.right` - Right half of the screen
-- `snapster.layout.top` - Top half of the screen
-- `snapster.layout.bottom` - Bottom half of the screen
-- `snapster.layout.topLeft` - Top-left quarter of the screen
-- `snapster.layout.topRight` - Top-right quarter of the screen
-- `snapster.layout.bottomLeft` - Bottom-left quarter of the screen
-- `snapster.layout.bottomRight` - Bottom-right quarter of the screen
-- `snapster.layout.fullScreen` - Full screen
+- `snapster.anchor.left` - Left half of the screen
+- `snapster.anchor.right` - Right half of the screen
+- `snapster.anchor.top` - Top half of the screen
+- `snapster.anchor.bottom` - Bottom half of the screen
+- `snapster.anchor.topLeft` - Top-left quarter of the screen
+- `snapster.anchor.topRight` - Top-right quarter of the screen
+- `snapster.anchor.bottomLeft` - Bottom-left quarter of the screen
+- `snapster.anchor.bottomRight` - Bottom-right quarter of the screen
+- `snapster.anchor.fullScreen` - Full screen
 
 ### Predefined Scales
 
@@ -118,6 +143,15 @@ Snapster comes with several predefined layouts:
 - `snapster.resize.xlarge` - WUXGA resolution (1920x1200)
 - `snapster.resize.config` - Configure according to preferred size
 
+### Logging
+
+Snapster includes logging functionality that can be configured:
+
+```lua
+-- Set log level (debug, info, warning, error)
+spoon.Snapster.logger.setLogLevel("info")
+```
+
 ## API
 
 ### Methods
@@ -126,6 +160,7 @@ Snapster comes with several predefined layouts:
 - `unbind(mapping)`: Remove a hotkey binding
 - `start()`: Enable all hotkeys
 - `stop()`: Disable all hotkeys
+- `undo()`: Undo the last operation
 
 ## Building from Source
 
