@@ -30,9 +30,11 @@ build: build-docs build-zip
 
 
 .PHONY: release
-release: preflight
+release: preflight build
 	git tag "v$(APPVER)" main
 	git push origin "v$(APPVER)"
+	gh release create --draft --title "$(APPNAME)-$(APPVER)" --prerelease --generate-notes \
+		--verify-tag "v$(APPVER)" "$(BASEDIR)/dist/$(APPNAME)-$(APPVER).zip"
 
 
 .PHONY: static-checks
