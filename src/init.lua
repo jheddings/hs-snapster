@@ -13,7 +13,7 @@ obj.__index = obj
 
 -- Metadata
 obj.name = "Snapster"
-obj.version = "1.3"
+obj.version = "1.3rc1"
 obj.author = "Jason Heddings"
 obj.license = "MIT"
 
