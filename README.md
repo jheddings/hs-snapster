@@ -113,19 +113,17 @@ The window history allows Snapster to undo operations using the `spoon.Snapster:
 spoon.Snapster.maxHistorySize = 5
 ```
 
-### Predefined Layouts
+### Predefined Anchors
 
-Snapster comes with several predefined layouts:
-
-- `snapster.anchor.left` - Left half of the screen
-- `snapster.anchor.right` - Right half of the screen
-- `snapster.anchor.top` - Top half of the screen
-- `snapster.anchor.bottom` - Bottom half of the screen
-- `snapster.anchor.topLeft` - Top-left quarter of the screen
-- `snapster.anchor.topRight` - Top-right quarter of the screen
-- `snapster.anchor.bottomLeft` - Bottom-left quarter of the screen
-- `snapster.anchor.bottomRight` - Bottom-right quarter of the screen
-- `snapster.anchor.fullScreen` - Full screen
+- `snapster.anchor.leftScreen` - Anchor to the left, top and bottom of the screen
+- `snapster.anchor.rightScreen` - Anchor to the right, top and bottom of the screen
+- `snapster.anchor.topScreen` - Anchor to the top, left and right of the screen
+- `snapster.anchor.bottomScreen` - Anchor to the bottom, left and right of the screen
+- `snapster.anchor.topLeftScreen` - Anchor to the top and left of the screen
+- `snapster.anchor.topRightScreen` - Anchor to the top and right of the screen
+- `snapster.anchor.bottomLeftScreen` - Anchor to the bottom and left of the screen
+- `snapster.anchor.bottomRightScreen` - Anchor to the bottom and right of the screen
+- `snapster.anchor.fullScreen` - Anchor to all screen edges
 
 ### Predefined Scales
 

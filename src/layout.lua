@@ -1,54 +1,13 @@
---- LayoutManager
---- Class
+--- === LayoutManager ===
 --- Manages and applies multiple window layout operations in sequence.
 ---
 --- The LayoutManager coordinates multiple layout operations (like resizing, 
 --- positioning, or anchoring) to be applied to a window in the proper order.
---- Each operation must implement an `apply(win)` method that takes a window
---- and returns a modified frame.
+--- Each operation must be a subclass of LayoutManager.Operation and implement
+--- the `apply(frame, context)` method.
 
 LayoutManager = {}
 LayoutManager.__index = LayoutManager
-
---- LayoutOperation
---- Class
---- Base class for window layout operations.
----
---- Layout operations perform specific window manipulations like resizing,
---- positioning, or anchoring. Each operation should be designed to perform
---- a single transform on a window frame.
-
-LayoutOperation = {}
-LayoutOperation.__index = LayoutOperation
-
---- LayoutOperation:new(obj)
---- Method
---- Creates a new LayoutOperation instance.
----
---- Parameters:
----  * obj - An optional table with properties to be merged into the new instance
----
---- Returns:
----  * A new LayoutOperation instance
-function LayoutOperation:new(obj)
-    local instance = obj or {}
-    setmetatable(instance, self)
-    return instance
-end
-
---- LayoutOperation:apply(frame, context)
---- Method
---- Applies a layout transformation to the given frame.
----
---- Parameters:
----  * frame - An hs.geometry rect representing the current window frame
----  * context - The window object providing context for the layout operation
----
---- Returns:
----  * A modified frame (hs.geometry rect) after applying the layout operation
-function LayoutOperation:apply(frame, context)
-    error("apply() must be implemented by subclass")
-end
 
 --- LayoutManager:new(...)
 --- Method
@@ -100,6 +59,45 @@ function LayoutManager:apply(win)
     logger.d("  => (", frame.w, "x", frame.h, ") @ [", frame.x, ",", frame.y, "]")
 
     return frame
+end
+
+--- === LayoutManager.Operation ===
+--- Base class for window layout operations.
+---
+--- Layout operations perform specific window manipulations like resizing,
+--- positioning, or anchoring. Each operation should be designed to perform
+--- a single transform on a window frame.
+
+LayoutManager.Operation = {}
+LayoutManager.Operation.__index = LayoutManager.Operation
+
+--- LayoutManager.Operation:new(obj)
+--- Method
+--- Creates a new Operation instance.
+---
+--- Parameters:
+---  * obj - An optional table with properties to be merged into the new instance
+---
+--- Returns:
+---  * A new Operation instance
+function LayoutManager.Operation:new(obj)
+    local instance = obj or {}
+    setmetatable(instance, self)
+    return instance
+end
+
+--- LayoutManager.Operation:apply(frame, context)
+--- Method
+--- Applies a layout transformation to the given frame.
+---
+--- Parameters:
+---  * frame - An hs.geometry rect representing the current window frame
+---  * context - The window object providing context for the layout operation
+---
+--- Returns:
+---  * A modified frame (hs.geometry rect) after applying the layout operation
+function LayoutManager.Operation:apply(frame, context)
+    error("apply() must be implemented by subclass")
 end
 
 return LayoutManager

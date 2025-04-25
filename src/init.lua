@@ -2,18 +2,18 @@
 ---
 --- Snapster is a Hammerspoon spoon that helps arrange windows on macOS.
 
+local obj = {}
+obj.__index = obj
+
 local LayoutManager = dofile(hs.spoons.resourcePath("layout.lua"))
 local FrameScaler = dofile(hs.spoons.resourcePath("scaler.lua"))
 local ScreenAnchor = dofile(hs.spoons.resourcePath("anchor.lua"))
 local FrameResizer = dofile(hs.spoons.resourcePath("resize.lua"))
 local WindowHistory = dofile(hs.spoons.resourcePath("undo.lua"))
 
-local obj = {}
-obj.__index = obj
-
 -- Metadata
 obj.name = "Snapster"
-obj.version = "1.3rc1"
+obj.version = "1.3rc2"
 obj.author = "Jason Heddings"
 obj.license = "MIT"
 
@@ -84,14 +84,14 @@ obj.scale = {
 --- Variable
 --- A table of predefined screen anchors.
 obj.anchor = {
-    left = ScreenAnchor.LEFT_SIDE,
-    right = ScreenAnchor.RIGHT_SIDE,
-    top = ScreenAnchor.TOP_OF_SCREEN,
-    bottom = ScreenAnchor.BOTTOM_OF_SCREEN,
-    topLeft = ScreenAnchor.TOP_LEFT,
-    bottomLeft = ScreenAnchor.BOTTOM_LEFT,
-    topRight = ScreenAnchor.TOP_RIGHT,
-    bottomRight = ScreenAnchor.BOTTOM_RIGHT,
+    leftScreen = ScreenAnchor.LEFT_SIDE,
+    rightScreen = ScreenAnchor.RIGHT_SIDE,
+    topScreen = ScreenAnchor.TOP_OF_SCREEN,
+    bottomScreen = ScreenAnchor.BOTTOM_OF_SCREEN,
+    topLeftScreen = ScreenAnchor.TOP_LEFT,
+    bottomLeftScreen = ScreenAnchor.BOTTOM_LEFT,
+    topRightScreen = ScreenAnchor.TOP_RIGHT,
+    bottomRightScreen = ScreenAnchor.BOTTOM_RIGHT,
     fullScreen = ScreenAnchor.FULL_SCREEN
 }
 
@@ -107,7 +107,7 @@ obj.resize = {
     xlarge = FrameResizer.WUXGA
 }
 
---- keyname(mods, key)
+--- Snapster:_keyname(mods, key)
 --- Function
 --- Builds a consistent string representation of a hotkey combination.
 ---
@@ -122,7 +122,7 @@ obj.resize = {
 ---  * Modifier keys are sorted and converted to lowercase
 ---  * The key is converted to uppercase
 ---  * This is used internally to create consistent keys for the hotkeys table
-local function keyname(mods, key)
+function obj:_keyname(mods, key)
     -- Sort the modifiers for consistent naming
     table.sort(mods)
 
@@ -201,7 +201,7 @@ end
 function obj:bind(mapping, ...)
     local mods = mapping[1]
     local key = mapping[2]
-    local keyBinding = keyname(mods, key)
+    local keyBinding = self:_keyname(mods, key)
 
     local mgr = LayoutManager:new(...)
 
@@ -233,7 +233,7 @@ end
 function obj:unbind(mapping)
     local mods = mapping[1]
     local key = mapping[2]
-    local keyBinding = keyname(mods, key)
+    local keyBinding = self:_keyname(mods, key)
     
     if self.hotkeys[keyBinding] then
         self.hotkeys[keyBinding]:delete()

@@ -1,8 +1,7 @@
---- ScreenAnchor
---- Class
+--- === ScreenAnchor ===
 --- Methods for anchoring windows to screen locations.
 
-ScreenAnchor = LayoutOperation:new()
+ScreenAnchor = LayoutManager.Operation:new()
 ScreenAnchor.__index = ScreenAnchor
 
 local ANCHOR_LEFT = "left"

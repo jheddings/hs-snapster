@@ -1,5 +1,4 @@
---- WindowHistory
---- Class
+--- === WindowHistory ===
 --- Manage history of window frame changes
 
 WindowHistory = {}

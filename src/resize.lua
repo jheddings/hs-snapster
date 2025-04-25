@@ -1,6 +1,8 @@
---- FrameResizer
---- Class
+--- === FrameResizer ===
 --- Handles resizing of window frames based on a configuration.
+
+FrameResizer = LayoutManager.Operation:new()
+FrameResizer.__index = FrameResizer
 
 --- FrameResizer:new(width, height)
 --- Method
@@ -12,9 +14,6 @@
 ---
 --- Returns:
 ---  * A new FrameResizer instance
-
-FrameResizer = LayoutOperation:new()
-FrameResizer.__index = FrameResizer
 
 function FrameResizer:new(width, height)
     local instance = {
