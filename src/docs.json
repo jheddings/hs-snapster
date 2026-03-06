@@ -1,0 +1,2552 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "Predefined resizer for QVGA resolution (320x240).",
+        "stripped_doc" : [
+          "Predefined resizer for QVGA resolution (320x240)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for QVGA resolution (320x240).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.QVGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "QVGA",
+        "def" : "FrameResizer.QVGA"
+      },
+      {
+        "doc" : "Predefined resizer for VGA resolution (640x480).",
+        "stripped_doc" : [
+          "Predefined resizer for VGA resolution (640x480)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for VGA resolution (640x480).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.VGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "VGA",
+        "def" : "FrameResizer.VGA"
+      },
+      {
+        "doc" : "Predefined resizer for SVGA resolution (800x600).",
+        "stripped_doc" : [
+          "Predefined resizer for SVGA resolution (800x600)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for SVGA resolution (800x600).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.SVGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "SVGA",
+        "def" : "FrameResizer.SVGA"
+      },
+      {
+        "doc" : "Predefined resizer for XGA resolution (1024x768).",
+        "stripped_doc" : [
+          "Predefined resizer for XGA resolution (1024x768)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for XGA resolution (1024x768).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.XGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "XGA",
+        "def" : "FrameResizer.XGA"
+      },
+      {
+        "doc" : "Predefined resizer for WXGA resolution (1280x720).",
+        "stripped_doc" : [
+          "Predefined resizer for WXGA resolution (1280x720)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for WXGA resolution (1280x720).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.WXGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "WXGA",
+        "def" : "FrameResizer.WXGA"
+      },
+      {
+        "doc" : "Predefined resizer for SXGA resolution (1280x1024).",
+        "stripped_doc" : [
+          "Predefined resizer for SXGA resolution (1280x1024)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for SXGA resolution (1280x1024).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.SXGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "SXGA",
+        "def" : "FrameResizer.SXGA"
+      },
+      {
+        "doc" : "Predefined resizer for UXGA resolution (1600x1200).",
+        "stripped_doc" : [
+          "Predefined resizer for UXGA resolution (1600x1200)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for UXGA resolution (1600x1200).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.UXGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "UXGA",
+        "def" : "FrameResizer.UXGA"
+      },
+      {
+        "doc" : "Predefined resizer for WUXGA resolution (1920x1200).",
+        "stripped_doc" : [
+          "Predefined resizer for WUXGA resolution (1920x1200)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for WUXGA resolution (1920x1200).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.WUXGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "WUXGA",
+        "def" : "FrameResizer.WUXGA"
+      },
+      {
+        "doc" : "Predefined resizer for QXGA resolution (2048x1536).",
+        "stripped_doc" : [
+          "Predefined resizer for QXGA resolution (2048x1536)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for QXGA resolution (2048x1536).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.QXGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "QXGA",
+        "def" : "FrameResizer.QXGA"
+      },
+      {
+        "doc" : "Predefined resizer for WQHD resolution (2560x1440).",
+        "stripped_doc" : [
+          "Predefined resizer for WQHD resolution (2560x1440)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for WQHD resolution (2560x1440).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.WQHD",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "WQHD",
+        "def" : "FrameResizer.WQHD"
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "UNKNOWN DESC",
+    "Constructor" : [
+
+    ],
+    "doc" : "Handles resizing of window frames based on a configuration.",
+    "Method" : [
+      {
+        "doc" : "Creates a new FrameResizer instance.\n\nParameters:\n * width - (optional) The fixed width to apply to windows\n * height - (optional) The fixed height to apply to windows\n\nReturns:\n * A new FrameResizer instance",
+        "stripped_doc" : [
+          "Creates a new FrameResizer instance.",
+          ""
+        ],
+        "parameters" : [
+          " * width - (optional) The fixed width to apply to windows",
+          " * height - (optional) The fixed height to apply to windows",
+          ""
+        ],
+        "desc" : "Creates a new FrameResizer instance.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer:new(width, height)",
+        "type" : "Method",
+        "returns" : [
+          " * A new FrameResizer instance"
+        ],
+        "name" : "new",
+        "def" : "FrameResizer:new(width, height)"
+      },
+      {
+        "doc" : "Applies the resizing to the specified window frame.\n\nParameters:\n * frame - The window frame to resize\n * context - The context object containing the application information\n\nReturns:\n * The modified frame\n\nNotes:\n * The resizing is based on the effective configuration of the application.",
+        "stripped_doc" : [
+          "Applies the resizing to the specified window frame.",
+          ""
+        ],
+        "parameters" : [
+          " * frame - The window frame to resize",
+          " * context - The context object containing the application information",
+          ""
+        ],
+        "desc" : "Applies the resizing to the specified window frame.",
+        "notes" : [
+          " * The resizing is based on the effective configuration of the application."
+        ],
+        "signature" : "FrameResizer:apply(frame, context)",
+        "type" : "Method",
+        "returns" : [
+          " * The modified frame",
+          ""
+        ],
+        "name" : "apply",
+        "def" : "FrameResizer:apply(frame, context)"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Predefined resizer for QVGA resolution (320x240).",
+        "stripped_doc" : [
+          "Predefined resizer for QVGA resolution (320x240)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for QVGA resolution (320x240).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.QVGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "QVGA",
+        "def" : "FrameResizer.QVGA"
+      },
+      {
+        "doc" : "Predefined resizer for QXGA resolution (2048x1536).",
+        "stripped_doc" : [
+          "Predefined resizer for QXGA resolution (2048x1536)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for QXGA resolution (2048x1536).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.QXGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "QXGA",
+        "def" : "FrameResizer.QXGA"
+      },
+      {
+        "doc" : "Predefined resizer for SVGA resolution (800x600).",
+        "stripped_doc" : [
+          "Predefined resizer for SVGA resolution (800x600)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for SVGA resolution (800x600).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.SVGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "SVGA",
+        "def" : "FrameResizer.SVGA"
+      },
+      {
+        "doc" : "Predefined resizer for SXGA resolution (1280x1024).",
+        "stripped_doc" : [
+          "Predefined resizer for SXGA resolution (1280x1024)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for SXGA resolution (1280x1024).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.SXGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "SXGA",
+        "def" : "FrameResizer.SXGA"
+      },
+      {
+        "doc" : "Predefined resizer for UXGA resolution (1600x1200).",
+        "stripped_doc" : [
+          "Predefined resizer for UXGA resolution (1600x1200)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for UXGA resolution (1600x1200).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.UXGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "UXGA",
+        "def" : "FrameResizer.UXGA"
+      },
+      {
+        "doc" : "Predefined resizer for VGA resolution (640x480).",
+        "stripped_doc" : [
+          "Predefined resizer for VGA resolution (640x480)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for VGA resolution (640x480).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.VGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "VGA",
+        "def" : "FrameResizer.VGA"
+      },
+      {
+        "doc" : "Predefined resizer for WQHD resolution (2560x1440).",
+        "stripped_doc" : [
+          "Predefined resizer for WQHD resolution (2560x1440)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for WQHD resolution (2560x1440).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.WQHD",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "WQHD",
+        "def" : "FrameResizer.WQHD"
+      },
+      {
+        "doc" : "Predefined resizer for WUXGA resolution (1920x1200).",
+        "stripped_doc" : [
+          "Predefined resizer for WUXGA resolution (1920x1200)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for WUXGA resolution (1920x1200).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.WUXGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "WUXGA",
+        "def" : "FrameResizer.WUXGA"
+      },
+      {
+        "doc" : "Predefined resizer for WXGA resolution (1280x720).",
+        "stripped_doc" : [
+          "Predefined resizer for WXGA resolution (1280x720)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for WXGA resolution (1280x720).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.WXGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "WXGA",
+        "def" : "FrameResizer.WXGA"
+      },
+      {
+        "doc" : "Predefined resizer for XGA resolution (1024x768).",
+        "stripped_doc" : [
+          "Predefined resizer for XGA resolution (1024x768)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined resizer for XGA resolution (1024x768).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer.XGA",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "XGA",
+        "def" : "FrameResizer.XGA"
+      },
+      {
+        "doc" : "Applies the resizing to the specified window frame.\n\nParameters:\n * frame - The window frame to resize\n * context - The context object containing the application information\n\nReturns:\n * The modified frame\n\nNotes:\n * The resizing is based on the effective configuration of the application.",
+        "stripped_doc" : [
+          "Applies the resizing to the specified window frame.",
+          ""
+        ],
+        "parameters" : [
+          " * frame - The window frame to resize",
+          " * context - The context object containing the application information",
+          ""
+        ],
+        "desc" : "Applies the resizing to the specified window frame.",
+        "notes" : [
+          " * The resizing is based on the effective configuration of the application."
+        ],
+        "signature" : "FrameResizer:apply(frame, context)",
+        "type" : "Method",
+        "returns" : [
+          " * The modified frame",
+          ""
+        ],
+        "name" : "apply",
+        "def" : "FrameResizer:apply(frame, context)"
+      },
+      {
+        "doc" : "Creates a new FrameResizer instance.\n\nParameters:\n * width - (optional) The fixed width to apply to windows\n * height - (optional) The fixed height to apply to windows\n\nReturns:\n * A new FrameResizer instance",
+        "stripped_doc" : [
+          "Creates a new FrameResizer instance.",
+          ""
+        ],
+        "parameters" : [
+          " * width - (optional) The fixed width to apply to windows",
+          " * height - (optional) The fixed height to apply to windows",
+          ""
+        ],
+        "desc" : "Creates a new FrameResizer instance.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameResizer:new(width, height)",
+        "type" : "Method",
+        "returns" : [
+          " * A new FrameResizer instance"
+        ],
+        "name" : "new",
+        "def" : "FrameResizer:new(width, height)"
+      }
+    ],
+    "name" : "FrameResizer"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "Predefined scaler for 1\/2 screen width, full height.",
+        "stripped_doc" : [
+          "Predefined scaler for 1\/2 screen width, full height."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for 1\/2 screen width, full height.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.HALF_WIDTH",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "HALF_WIDTH",
+        "def" : "FrameScaler.HALF_WIDTH"
+      },
+      {
+        "doc" : "Predefined scaler for 1\/3 screen width, full height.",
+        "stripped_doc" : [
+          "Predefined scaler for 1\/3 screen width, full height."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for 1\/3 screen width, full height.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.THIRD_WIDTH",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "THIRD_WIDTH",
+        "def" : "FrameScaler.THIRD_WIDTH"
+      },
+      {
+        "doc" : "Predefined scaler for 1\/4 screen width, full height.",
+        "stripped_doc" : [
+          "Predefined scaler for 1\/4 screen width, full height."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for 1\/4 screen width, full height.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.QUARTER_WIDTH",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "QUARTER_WIDTH",
+        "def" : "FrameScaler.QUARTER_WIDTH"
+      },
+      {
+        "doc" : "Predefined scaler for 1\/2 screen height, full width.",
+        "stripped_doc" : [
+          "Predefined scaler for 1\/2 screen height, full width."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for 1\/2 screen height, full width.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.HALF_HEIGHT",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "HALF_HEIGHT",
+        "def" : "FrameScaler.HALF_HEIGHT"
+      },
+      {
+        "doc" : "Predefined scaler for the full screen.",
+        "stripped_doc" : [
+          "Predefined scaler for the full screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for the full screen.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.FULL_SCREEN",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "FULL_SCREEN",
+        "def" : "FrameScaler.FULL_SCREEN"
+      },
+      {
+        "doc" : "Predefined scaler for 1\/2 screen width and height (1\/4 of the full screen).",
+        "stripped_doc" : [
+          "Predefined scaler for 1\/2 screen width and height (1\/4 of the full screen)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for 1\/2 screen width and height (1\/4 of the full screen).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.QUARTER_SCREEN",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "QUARTER_SCREEN",
+        "def" : "FrameScaler.QUARTER_SCREEN"
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "UNKNOWN DESC",
+    "Constructor" : [
+
+    ],
+    "doc" : "Handles scaling of window frames.",
+    "Method" : [
+      {
+        "doc" : "Creates a new FrameScaler instance.\n\nParameters:\n * width: The width as a fraction of the screen width (0 to 1)\n * height: The height as a fraction of the screen height (0 to 1)\n\nReturns:\n * A new FrameScaler instance",
+        "stripped_doc" : [
+          "Creates a new FrameScaler instance.",
+          ""
+        ],
+        "parameters" : [
+          " * width: The width as a fraction of the screen width (0 to 1)",
+          " * height: The height as a fraction of the screen height (0 to 1)",
+          ""
+        ],
+        "desc" : "Creates a new FrameScaler instance.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler:new(width, height)",
+        "type" : "Method",
+        "returns" : [
+          " * A new FrameScaler instance"
+        ],
+        "name" : "new",
+        "def" : "FrameScaler:new(width, height)"
+      },
+      {
+        "doc" : "Applies the scaling to the specified window frame.\n\nParameters:\n * frame: The window frame to be scaled\n * context: The context object containing screen and application information\n\nReturns:\n * The modified frame with updated width and height",
+        "stripped_doc" : [
+          "Applies the scaling to the specified window frame.",
+          ""
+        ],
+        "parameters" : [
+          " * frame: The window frame to be scaled",
+          " * context: The context object containing screen and application information",
+          ""
+        ],
+        "desc" : "Applies the scaling to the specified window frame.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler:apply(frame, context)",
+        "type" : "Method",
+        "returns" : [
+          " * The modified frame with updated width and height"
+        ],
+        "name" : "apply",
+        "def" : "FrameScaler:apply(frame, context)"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Predefined scaler for the full screen.",
+        "stripped_doc" : [
+          "Predefined scaler for the full screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for the full screen.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.FULL_SCREEN",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "FULL_SCREEN",
+        "def" : "FrameScaler.FULL_SCREEN"
+      },
+      {
+        "doc" : "Predefined scaler for 1\/2 screen height, full width.",
+        "stripped_doc" : [
+          "Predefined scaler for 1\/2 screen height, full width."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for 1\/2 screen height, full width.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.HALF_HEIGHT",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "HALF_HEIGHT",
+        "def" : "FrameScaler.HALF_HEIGHT"
+      },
+      {
+        "doc" : "Predefined scaler for 1\/2 screen width, full height.",
+        "stripped_doc" : [
+          "Predefined scaler for 1\/2 screen width, full height."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for 1\/2 screen width, full height.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.HALF_WIDTH",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "HALF_WIDTH",
+        "def" : "FrameScaler.HALF_WIDTH"
+      },
+      {
+        "doc" : "Predefined scaler for 1\/2 screen width and height (1\/4 of the full screen).",
+        "stripped_doc" : [
+          "Predefined scaler for 1\/2 screen width and height (1\/4 of the full screen)."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for 1\/2 screen width and height (1\/4 of the full screen).",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.QUARTER_SCREEN",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "QUARTER_SCREEN",
+        "def" : "FrameScaler.QUARTER_SCREEN"
+      },
+      {
+        "doc" : "Predefined scaler for 1\/4 screen width, full height.",
+        "stripped_doc" : [
+          "Predefined scaler for 1\/4 screen width, full height."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for 1\/4 screen width, full height.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.QUARTER_WIDTH",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "QUARTER_WIDTH",
+        "def" : "FrameScaler.QUARTER_WIDTH"
+      },
+      {
+        "doc" : "Predefined scaler for 1\/3 screen width, full height.",
+        "stripped_doc" : [
+          "Predefined scaler for 1\/3 screen width, full height."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined scaler for 1\/3 screen width, full height.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler.THIRD_WIDTH",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "THIRD_WIDTH",
+        "def" : "FrameScaler.THIRD_WIDTH"
+      },
+      {
+        "doc" : "Applies the scaling to the specified window frame.\n\nParameters:\n * frame: The window frame to be scaled\n * context: The context object containing screen and application information\n\nReturns:\n * The modified frame with updated width and height",
+        "stripped_doc" : [
+          "Applies the scaling to the specified window frame.",
+          ""
+        ],
+        "parameters" : [
+          " * frame: The window frame to be scaled",
+          " * context: The context object containing screen and application information",
+          ""
+        ],
+        "desc" : "Applies the scaling to the specified window frame.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler:apply(frame, context)",
+        "type" : "Method",
+        "returns" : [
+          " * The modified frame with updated width and height"
+        ],
+        "name" : "apply",
+        "def" : "FrameScaler:apply(frame, context)"
+      },
+      {
+        "doc" : "Creates a new FrameScaler instance.\n\nParameters:\n * width: The width as a fraction of the screen width (0 to 1)\n * height: The height as a fraction of the screen height (0 to 1)\n\nReturns:\n * A new FrameScaler instance",
+        "stripped_doc" : [
+          "Creates a new FrameScaler instance.",
+          ""
+        ],
+        "parameters" : [
+          " * width: The width as a fraction of the screen width (0 to 1)",
+          " * height: The height as a fraction of the screen height (0 to 1)",
+          ""
+        ],
+        "desc" : "Creates a new FrameScaler instance.",
+        "notes" : [
+
+        ],
+        "signature" : "FrameScaler:new(width, height)",
+        "type" : "Method",
+        "returns" : [
+          " * A new FrameScaler instance"
+        ],
+        "name" : "new",
+        "def" : "FrameScaler:new(width, height)"
+      }
+    ],
+    "name" : "FrameScaler"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+      "Operation"
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "",
+    "Constructor" : [
+
+    ],
+    "doc" : "Manages and applies multiple window layout operations in sequence.\n\nThe LayoutManager coordinates multiple layout operations (like resizing, \npositioning, or anchoring) to be applied to a window in the proper order.\nEach operation must be a subclass of LayoutManager.Operation and implement\nthe `apply(frame, context)` method.",
+    "Method" : [
+      {
+        "doc" : "Creates a new LayoutManager instance.\n\nParameters:\n * ... - Zero or more layout operation objects, each must implement an apply(frame, context) method\n\nReturns:\n * A new LayoutManager instance",
+        "stripped_doc" : [
+          "Creates a new LayoutManager instance.",
+          ""
+        ],
+        "parameters" : [
+          " * ... - Zero or more layout operation objects, each must implement an apply(frame, context) method",
+          ""
+        ],
+        "desc" : "Creates a new LayoutManager instance.",
+        "notes" : [
+
+        ],
+        "signature" : "LayoutManager:new(...)",
+        "type" : "Method",
+        "returns" : [
+          " * A new LayoutManager instance"
+        ],
+        "name" : "new",
+        "def" : "LayoutManager:new(...)"
+      },
+      {
+        "doc" : "Applies the layout operations to the specified window.\n\nParameters:\n * win - An hs.window object to apply the layout operations to\n\nReturns:\n * The final frame after all operations have been applied\n\nNotes:\n * Each layout operation is called in sequence",
+        "stripped_doc" : [
+          "Applies the layout operations to the specified window.",
+          ""
+        ],
+        "parameters" : [
+          " * win - An hs.window object to apply the layout operations to",
+          ""
+        ],
+        "desc" : "Applies the layout operations to the specified window.",
+        "notes" : [
+          " * Each layout operation is called in sequence"
+        ],
+        "signature" : "LayoutManager:apply(win)",
+        "type" : "Method",
+        "returns" : [
+          " * The final frame after all operations have been applied",
+          ""
+        ],
+        "name" : "apply",
+        "def" : "LayoutManager:apply(win)"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Applies the layout operations to the specified window.\n\nParameters:\n * win - An hs.window object to apply the layout operations to\n\nReturns:\n * The final frame after all operations have been applied\n\nNotes:\n * Each layout operation is called in sequence",
+        "stripped_doc" : [
+          "Applies the layout operations to the specified window.",
+          ""
+        ],
+        "parameters" : [
+          " * win - An hs.window object to apply the layout operations to",
+          ""
+        ],
+        "desc" : "Applies the layout operations to the specified window.",
+        "notes" : [
+          " * Each layout operation is called in sequence"
+        ],
+        "signature" : "LayoutManager:apply(win)",
+        "type" : "Method",
+        "returns" : [
+          " * The final frame after all operations have been applied",
+          ""
+        ],
+        "name" : "apply",
+        "def" : "LayoutManager:apply(win)"
+      },
+      {
+        "doc" : "Creates a new LayoutManager instance.\n\nParameters:\n * ... - Zero or more layout operation objects, each must implement an apply(frame, context) method\n\nReturns:\n * A new LayoutManager instance",
+        "stripped_doc" : [
+          "Creates a new LayoutManager instance.",
+          ""
+        ],
+        "parameters" : [
+          " * ... - Zero or more layout operation objects, each must implement an apply(frame, context) method",
+          ""
+        ],
+        "desc" : "Creates a new LayoutManager instance.",
+        "notes" : [
+
+        ],
+        "signature" : "LayoutManager:new(...)",
+        "type" : "Method",
+        "returns" : [
+          " * A new LayoutManager instance"
+        ],
+        "name" : "new",
+        "def" : "LayoutManager:new(...)"
+      }
+    ],
+    "name" : "LayoutManager"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "",
+    "Constructor" : [
+
+    ],
+    "doc" : "Base class for window layout operations.\n\nLayout operations perform specific window manipulations like resizing,\npositioning, or anchoring. Each operation should be designed to perform\na single transform on a window frame.",
+    "Method" : [
+      {
+        "doc" : "Creates a new Operation instance.\n\nParameters:\n * obj - An optional table with properties to be merged into the new instance\n\nReturns:\n * A new Operation instance",
+        "stripped_doc" : [
+          "Creates a new Operation instance.",
+          ""
+        ],
+        "parameters" : [
+          " * obj - An optional table with properties to be merged into the new instance",
+          ""
+        ],
+        "desc" : "Creates a new Operation instance.",
+        "notes" : [
+
+        ],
+        "signature" : "LayoutManager.Operation:new(obj)",
+        "type" : "Method",
+        "returns" : [
+          " * A new Operation instance"
+        ],
+        "name" : "new",
+        "def" : "LayoutManager.Operation:new(obj)"
+      },
+      {
+        "doc" : "Applies a layout transformation to the given frame.\n\nParameters:\n * frame - An hs.geometry rect representing the current window frame\n * context - The window object providing context for the layout operation\n\nReturns:\n * A modified frame (hs.geometry rect) after applying the layout operation",
+        "stripped_doc" : [
+          "Applies a layout transformation to the given frame.",
+          ""
+        ],
+        "parameters" : [
+          " * frame - An hs.geometry rect representing the current window frame",
+          " * context - The window object providing context for the layout operation",
+          ""
+        ],
+        "desc" : "Applies a layout transformation to the given frame.",
+        "notes" : [
+
+        ],
+        "signature" : "LayoutManager.Operation:apply(frame, context)",
+        "type" : "Method",
+        "returns" : [
+          " * A modified frame (hs.geometry rect) after applying the layout operation"
+        ],
+        "name" : "apply",
+        "def" : "LayoutManager.Operation:apply(frame, context)"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Applies a layout transformation to the given frame.\n\nParameters:\n * frame - An hs.geometry rect representing the current window frame\n * context - The window object providing context for the layout operation\n\nReturns:\n * A modified frame (hs.geometry rect) after applying the layout operation",
+        "stripped_doc" : [
+          "Applies a layout transformation to the given frame.",
+          ""
+        ],
+        "parameters" : [
+          " * frame - An hs.geometry rect representing the current window frame",
+          " * context - The window object providing context for the layout operation",
+          ""
+        ],
+        "desc" : "Applies a layout transformation to the given frame.",
+        "notes" : [
+
+        ],
+        "signature" : "LayoutManager.Operation:apply(frame, context)",
+        "type" : "Method",
+        "returns" : [
+          " * A modified frame (hs.geometry rect) after applying the layout operation"
+        ],
+        "name" : "apply",
+        "def" : "LayoutManager.Operation:apply(frame, context)"
+      },
+      {
+        "doc" : "Creates a new Operation instance.\n\nParameters:\n * obj - An optional table with properties to be merged into the new instance\n\nReturns:\n * A new Operation instance",
+        "stripped_doc" : [
+          "Creates a new Operation instance.",
+          ""
+        ],
+        "parameters" : [
+          " * obj - An optional table with properties to be merged into the new instance",
+          ""
+        ],
+        "desc" : "Creates a new Operation instance.",
+        "notes" : [
+
+        ],
+        "signature" : "LayoutManager.Operation:new(obj)",
+        "type" : "Method",
+        "returns" : [
+          " * A new Operation instance"
+        ],
+        "name" : "new",
+        "def" : "LayoutManager.Operation:new(obj)"
+      }
+    ],
+    "name" : "LayoutManager.Operation"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "Predefined anchors for the left side of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the left side of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the left side of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.LEFT_SIDE",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "LEFT_SIDE",
+        "def" : "ScreenAnchor.LEFT_SIDE"
+      },
+      {
+        "doc" : "Predefined anchors for the right side of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the right side of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the right side of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.RIGHT_SIDE",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "RIGHT_SIDE",
+        "def" : "ScreenAnchor.RIGHT_SIDE"
+      },
+      {
+        "doc" : "Predefined anchors for the top of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the top of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the top of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.TOP_OF_SCREEN",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "TOP_OF_SCREEN",
+        "def" : "ScreenAnchor.TOP_OF_SCREEN"
+      },
+      {
+        "doc" : "Predefined anchors for the bottom of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the bottom of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the bottom of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.BOTTOM_OF_SCREEN",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "BOTTOM_OF_SCREEN",
+        "def" : "ScreenAnchor.BOTTOM_OF_SCREEN"
+      },
+      {
+        "doc" : "Predefined anchors for the top left corner of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the top left corner of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the top left corner of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.TOP_LEFT",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "TOP_LEFT",
+        "def" : "ScreenAnchor.TOP_LEFT"
+      },
+      {
+        "doc" : "Predefined anchors for the bottom left corner of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the bottom left corner of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the bottom left corner of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.BOTTOM_LEFT",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "BOTTOM_LEFT",
+        "def" : "ScreenAnchor.BOTTOM_LEFT"
+      },
+      {
+        "doc" : "Predefined anchors for the top right corner of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the top right corner of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the top right corner of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.TOP_RIGHT",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "TOP_RIGHT",
+        "def" : "ScreenAnchor.TOP_RIGHT"
+      },
+      {
+        "doc" : "Predefined anchors for the bottom right corner of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the bottom right corner of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the bottom right corner of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.BOTTOM_RIGHT",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "BOTTOM_RIGHT",
+        "def" : "ScreenAnchor.BOTTOM_RIGHT"
+      },
+      {
+        "doc" : "Predefined anchors for the full screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the full screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the full screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.FULL_SCREEN",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "FULL_SCREEN",
+        "def" : "ScreenAnchor.FULL_SCREEN"
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "UNKNOWN DESC",
+    "Constructor" : [
+
+    ],
+    "doc" : "Methods for anchoring windows to screen locations.",
+    "Method" : [
+      {
+        "doc" : "Creates a new ScreenAnchor instance with the specified anchors.\n\nParameters:\n * ... - Zero or more anchor strings (left, right, top, bottom)",
+        "stripped_doc" : [
+          "Creates a new ScreenAnchor instance with the specified anchors.",
+          ""
+        ],
+        "parameters" : [
+          " * ... - Zero or more anchor strings (left, right, top, bottom)"
+        ],
+        "desc" : "Creates a new ScreenAnchor instance with the specified anchors.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor:new(...)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "new",
+        "def" : "ScreenAnchor:new(...)"
+      },
+      {
+        "doc" : "Applies the anchors to the specified window frame.\n\nParameters:\n * frame - The window frame to anchor\n * context - The context object containing the application information\n\nReturns:\n * The modified frame with applied anchors",
+        "stripped_doc" : [
+          "Applies the anchors to the specified window frame.",
+          ""
+        ],
+        "parameters" : [
+          " * frame - The window frame to anchor",
+          " * context - The context object containing the application information",
+          ""
+        ],
+        "desc" : "Applies the anchors to the specified window frame.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor:apply(frame, context)",
+        "type" : "Method",
+        "returns" : [
+          " * The modified frame with applied anchors"
+        ],
+        "name" : "apply",
+        "def" : "ScreenAnchor:apply(frame, context)"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Predefined anchors for the bottom left corner of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the bottom left corner of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the bottom left corner of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.BOTTOM_LEFT",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "BOTTOM_LEFT",
+        "def" : "ScreenAnchor.BOTTOM_LEFT"
+      },
+      {
+        "doc" : "Predefined anchors for the bottom of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the bottom of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the bottom of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.BOTTOM_OF_SCREEN",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "BOTTOM_OF_SCREEN",
+        "def" : "ScreenAnchor.BOTTOM_OF_SCREEN"
+      },
+      {
+        "doc" : "Predefined anchors for the bottom right corner of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the bottom right corner of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the bottom right corner of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.BOTTOM_RIGHT",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "BOTTOM_RIGHT",
+        "def" : "ScreenAnchor.BOTTOM_RIGHT"
+      },
+      {
+        "doc" : "Predefined anchors for the full screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the full screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the full screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.FULL_SCREEN",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "FULL_SCREEN",
+        "def" : "ScreenAnchor.FULL_SCREEN"
+      },
+      {
+        "doc" : "Predefined anchors for the left side of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the left side of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the left side of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.LEFT_SIDE",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "LEFT_SIDE",
+        "def" : "ScreenAnchor.LEFT_SIDE"
+      },
+      {
+        "doc" : "Predefined anchors for the right side of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the right side of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the right side of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.RIGHT_SIDE",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "RIGHT_SIDE",
+        "def" : "ScreenAnchor.RIGHT_SIDE"
+      },
+      {
+        "doc" : "Predefined anchors for the top left corner of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the top left corner of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the top left corner of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.TOP_LEFT",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "TOP_LEFT",
+        "def" : "ScreenAnchor.TOP_LEFT"
+      },
+      {
+        "doc" : "Predefined anchors for the top of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the top of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the top of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.TOP_OF_SCREEN",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "TOP_OF_SCREEN",
+        "def" : "ScreenAnchor.TOP_OF_SCREEN"
+      },
+      {
+        "doc" : "Predefined anchors for the top right corner of the screen.",
+        "stripped_doc" : [
+          "Predefined anchors for the top right corner of the screen."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Predefined anchors for the top right corner of the screen.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor.TOP_RIGHT",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "TOP_RIGHT",
+        "def" : "ScreenAnchor.TOP_RIGHT"
+      },
+      {
+        "doc" : "Applies the anchors to the specified window frame.\n\nParameters:\n * frame - The window frame to anchor\n * context - The context object containing the application information\n\nReturns:\n * The modified frame with applied anchors",
+        "stripped_doc" : [
+          "Applies the anchors to the specified window frame.",
+          ""
+        ],
+        "parameters" : [
+          " * frame - The window frame to anchor",
+          " * context - The context object containing the application information",
+          ""
+        ],
+        "desc" : "Applies the anchors to the specified window frame.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor:apply(frame, context)",
+        "type" : "Method",
+        "returns" : [
+          " * The modified frame with applied anchors"
+        ],
+        "name" : "apply",
+        "def" : "ScreenAnchor:apply(frame, context)"
+      },
+      {
+        "doc" : "Creates a new ScreenAnchor instance with the specified anchors.\n\nParameters:\n * ... - Zero or more anchor strings (left, right, top, bottom)",
+        "stripped_doc" : [
+          "Creates a new ScreenAnchor instance with the specified anchors.",
+          ""
+        ],
+        "parameters" : [
+          " * ... - Zero or more anchor strings (left, right, top, bottom)"
+        ],
+        "desc" : "Creates a new ScreenAnchor instance with the specified anchors.",
+        "notes" : [
+
+        ],
+        "signature" : "ScreenAnchor:new(...)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "new",
+        "def" : "ScreenAnchor:new(...)"
+      }
+    ],
+    "name" : "ScreenAnchor"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+      {
+        "doc" : "Builds a consistent string representation of a hotkey combination.\n\nParameters:\n * mods - An array of modifier keys (e.g., {\"cmd\", \"alt\"})\n * key - A string representing the key (e.g., \"s\" or \"return\")\n\nReturns:\n * A standardized string representation of the hotkey (e.g., \"alt-cmd-S\")\n\nNotes:\n * Modifier keys are sorted and converted to lowercase\n * The key is converted to uppercase\n * This is used internally to create consistent keys for the hotkeys table",
+        "stripped_doc" : [
+          "Builds a consistent string representation of a hotkey combination.",
+          ""
+        ],
+        "parameters" : [
+          " * mods - An array of modifier keys (e.g., {\"cmd\", \"alt\"})",
+          " * key - A string representing the key (e.g., \"s\" or \"return\")",
+          ""
+        ],
+        "desc" : "Builds a consistent string representation of a hotkey combination.",
+        "notes" : [
+          " * Modifier keys are sorted and converted to lowercase",
+          " * The key is converted to uppercase",
+          " * This is used internally to create consistent keys for the hotkeys table"
+        ],
+        "signature" : "Snapster:_keyname(mods, key)",
+        "type" : "Function",
+        "returns" : [
+          " * A standardized string representation of the hotkey (e.g., \"alt-cmd-S\")",
+          ""
+        ],
+        "name" : "_keyname",
+        "def" : "Snapster:_keyname(mods, key)"
+      }
+    ],
+    "Variable" : [
+      {
+        "doc" : "A boolean that determines whether to show an alert when a window is resized.\n\nNotes:\n * The default is `true`",
+        "stripped_doc" : [
+          "A boolean that determines whether to show an alert when a window is resized.",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "A boolean that determines whether to show an alert when a window is resized.",
+        "notes" : [
+          " * The default is `true`"
+        ],
+        "signature" : "Snapster.showAlert",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "showAlert",
+        "def" : "Snapster.showAlert"
+      },
+      {
+        "doc" : "The maximum number of window states to keep in history.\n\nNotes:\n * The default is 10\n * Set to 0 to disable history",
+        "stripped_doc" : [
+          "The maximum number of window states to keep in history.",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "The maximum number of window states to keep in history.",
+        "notes" : [
+          " * The default is 10",
+          " * Set to 0 to disable history"
+        ],
+        "signature" : "Snapster.maxHistorySize",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "maxHistorySize",
+        "def" : "Snapster.maxHistorySize"
+      },
+      {
+        "doc" : "A table of default window settings for the Snapster spoon.",
+        "stripped_doc" : [
+          "A table of default window settings for the Snapster spoon."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "A table of default window settings for the Snapster spoon.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster.defaults",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "defaults",
+        "def" : "Snapster.defaults"
+      },
+      {
+        "doc" : "Override the default window settings for specific applications.\n\nThe table consists of application names as keys and a table of settings as values.\nSettings may include any option from the defaults table.  Only settings that are\nspecified will override the defaults.\n\nExample:\n  snapster.apps = {\n    [\"Google Chrome\"] = {width = 1280, height = 900},\n    [\"Code\"] = {minimumWidth = 1600},\n  }",
+        "stripped_doc" : [
+          "Override the default window settings for specific applications.",
+          "",
+          "The table consists of application names as keys and a table of settings as values.",
+          "Settings may include any option from the defaults table.  Only settings that are",
+          "specified will override the defaults.",
+          "",
+          "Example:",
+          "  snapster.apps = {",
+          "    [\"Google Chrome\"] = {width = 1280, height = 900},",
+          "    [\"Code\"] = {minimumWidth = 1600},",
+          "  }"
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Override the default window settings for specific applications.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster.apps",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "apps",
+        "def" : "Snapster.apps"
+      },
+      {
+        "doc" : "A table of predefined scaling factors.",
+        "stripped_doc" : [
+          "A table of predefined scaling factors."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "A table of predefined scaling factors.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster.scale",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "scale",
+        "def" : "Snapster.scale"
+      },
+      {
+        "doc" : "A table of predefined screen anchors.",
+        "stripped_doc" : [
+          "A table of predefined screen anchors."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "A table of predefined screen anchors.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster.anchor",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "anchor",
+        "def" : "Snapster.anchor"
+      },
+      {
+        "doc" : "A table of predefined window sizes.",
+        "stripped_doc" : [
+          "A table of predefined window sizes."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "A table of predefined window sizes.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster.resize",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "resize",
+        "def" : "Snapster.resize"
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "Snapster is a Hammerspoon spoon that helps arrange windows on macOS.",
+    "Constructor" : [
+
+    ],
+    "doc" : "Snapster is a Hammerspoon spoon that helps arrange windows on macOS.",
+    "Method" : [
+      {
+        "doc" : "Returns the effective configuration for an application by combining default settings with app-specific overrides.\n\nParameters:\n * app - An hs.application object representing the application\n\nReturns:\n * A table containing the effective configuration settings for the application",
+        "stripped_doc" : [
+          "Returns the effective configuration for an application by combining default settings with app-specific overrides.",
+          ""
+        ],
+        "parameters" : [
+          " * app - An hs.application object representing the application",
+          ""
+        ],
+        "desc" : "Returns the effective configuration for an application by combining default settings with app-specific overrides.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster:getEffectiveConfig(app)",
+        "type" : "Method",
+        "returns" : [
+          " * A table containing the effective configuration settings for the application"
+        ],
+        "name" : "getEffectiveConfig",
+        "def" : "Snapster:getEffectiveConfig(app)"
+      },
+      {
+        "doc" : "Internal method that applies a list of layouts to the currently focused window.\n\nParameters:\n * layouts - A table of layout objects to apply in sequence\n\nNotes:\n * Each layout object in the list must have an apply() method that takes a window object\n * If showAlert is true, displays an alert with the window dimensions after applying layouts",
+        "stripped_doc" : [
+          "Internal method that applies a list of layouts to the currently focused window.",
+          ""
+        ],
+        "parameters" : [
+          " * layouts - A table of layout objects to apply in sequence",
+          ""
+        ],
+        "desc" : "Internal method that applies a list of layouts to the currently focused window.",
+        "notes" : [
+          " * Each layout object in the list must have an apply() method that takes a window object",
+          " * If showAlert is true, displays an alert with the window dimensions after applying layouts"
+        ],
+        "signature" : "Snapster:_apply(layouts)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "_apply",
+        "def" : "Snapster:_apply(layouts)"
+      },
+      {
+        "doc" : "Binds a hotkey to the given layout.\n\nParameters:\n * mapping - A table {mods, key} defining the hotkey\n * ... - A list of layout operations to apply\n\nNotes:\n * The layout operations will be applied in the order they are provided.",
+        "stripped_doc" : [
+          "Binds a hotkey to the given layout.",
+          ""
+        ],
+        "parameters" : [
+          " * mapping - A table {mods, key} defining the hotkey",
+          " * ... - A list of layout operations to apply",
+          ""
+        ],
+        "desc" : "Binds a hotkey to the given layout.",
+        "notes" : [
+          " * The layout operations will be applied in the order they are provided."
+        ],
+        "signature" : "Snapster:bind(mapping, width, height, anchors)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "bind",
+        "def" : "Snapster:bind(mapping, width, height, anchors)"
+      },
+      {
+        "doc" : "Unbinds a hotkey.\n\nParameters:\n * mapping - A table {mods, key} defining the hotkey\n\nReturns:\n * The Snapster object",
+        "stripped_doc" : [
+          "Unbinds a hotkey.",
+          ""
+        ],
+        "parameters" : [
+          " * mapping - A table {mods, key} defining the hotkey",
+          ""
+        ],
+        "desc" : "Unbinds a hotkey.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster:unbind(mapping)",
+        "type" : "Method",
+        "returns" : [
+          " * The Snapster object"
+        ],
+        "name" : "unbind",
+        "def" : "Snapster:unbind(mapping)"
+      },
+      {
+        "doc" : "Start Snapster\n\nReturns:\n * The Snapster object",
+        "stripped_doc" : [
+          "Start Snapster",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Start Snapster",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster:start()",
+        "type" : "Method",
+        "returns" : [
+          " * The Snapster object"
+        ],
+        "name" : "start",
+        "def" : "Snapster:start()"
+      },
+      {
+        "doc" : "Stops Snapster\n\nReturns:\n * The Snapster object",
+        "stripped_doc" : [
+          "Stops Snapster",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Stops Snapster",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The Snapster object"
+        ],
+        "name" : "stop",
+        "def" : "Snapster:stop()"
+      },
+      {
+        "doc" : "Undoes the last window operation, restoring the previous window state.\n\nReturns:\n * The Snapster object",
+        "stripped_doc" : [
+          "Undoes the last window operation, restoring the previous window state.",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Undoes the last window operation, restoring the previous window state.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster:undo()",
+        "type" : "Method",
+        "returns" : [
+          " * The Snapster object"
+        ],
+        "name" : "undo",
+        "def" : "Snapster:undo()"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "A table of predefined screen anchors.",
+        "stripped_doc" : [
+          "A table of predefined screen anchors."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "A table of predefined screen anchors.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster.anchor",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "anchor",
+        "def" : "Snapster.anchor"
+      },
+      {
+        "doc" : "Override the default window settings for specific applications.\n\nThe table consists of application names as keys and a table of settings as values.\nSettings may include any option from the defaults table.  Only settings that are\nspecified will override the defaults.\n\nExample:\n  snapster.apps = {\n    [\"Google Chrome\"] = {width = 1280, height = 900},\n    [\"Code\"] = {minimumWidth = 1600},\n  }",
+        "stripped_doc" : [
+          "Override the default window settings for specific applications.",
+          "",
+          "The table consists of application names as keys and a table of settings as values.",
+          "Settings may include any option from the defaults table.  Only settings that are",
+          "specified will override the defaults.",
+          "",
+          "Example:",
+          "  snapster.apps = {",
+          "    [\"Google Chrome\"] = {width = 1280, height = 900},",
+          "    [\"Code\"] = {minimumWidth = 1600},",
+          "  }"
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Override the default window settings for specific applications.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster.apps",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "apps",
+        "def" : "Snapster.apps"
+      },
+      {
+        "doc" : "A table of default window settings for the Snapster spoon.",
+        "stripped_doc" : [
+          "A table of default window settings for the Snapster spoon."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "A table of default window settings for the Snapster spoon.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster.defaults",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "defaults",
+        "def" : "Snapster.defaults"
+      },
+      {
+        "doc" : "The maximum number of window states to keep in history.\n\nNotes:\n * The default is 10\n * Set to 0 to disable history",
+        "stripped_doc" : [
+          "The maximum number of window states to keep in history.",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "The maximum number of window states to keep in history.",
+        "notes" : [
+          " * The default is 10",
+          " * Set to 0 to disable history"
+        ],
+        "signature" : "Snapster.maxHistorySize",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "maxHistorySize",
+        "def" : "Snapster.maxHistorySize"
+      },
+      {
+        "doc" : "A table of predefined window sizes.",
+        "stripped_doc" : [
+          "A table of predefined window sizes."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "A table of predefined window sizes.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster.resize",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "resize",
+        "def" : "Snapster.resize"
+      },
+      {
+        "doc" : "A table of predefined scaling factors.",
+        "stripped_doc" : [
+          "A table of predefined scaling factors."
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "A table of predefined scaling factors.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster.scale",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "scale",
+        "def" : "Snapster.scale"
+      },
+      {
+        "doc" : "A boolean that determines whether to show an alert when a window is resized.\n\nNotes:\n * The default is `true`",
+        "stripped_doc" : [
+          "A boolean that determines whether to show an alert when a window is resized.",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "A boolean that determines whether to show an alert when a window is resized.",
+        "notes" : [
+          " * The default is `true`"
+        ],
+        "signature" : "Snapster.showAlert",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "showAlert",
+        "def" : "Snapster.showAlert"
+      },
+      {
+        "doc" : "Builds a consistent string representation of a hotkey combination.\n\nParameters:\n * mods - An array of modifier keys (e.g., {\"cmd\", \"alt\"})\n * key - A string representing the key (e.g., \"s\" or \"return\")\n\nReturns:\n * A standardized string representation of the hotkey (e.g., \"alt-cmd-S\")\n\nNotes:\n * Modifier keys are sorted and converted to lowercase\n * The key is converted to uppercase\n * This is used internally to create consistent keys for the hotkeys table",
+        "stripped_doc" : [
+          "Builds a consistent string representation of a hotkey combination.",
+          ""
+        ],
+        "parameters" : [
+          " * mods - An array of modifier keys (e.g., {\"cmd\", \"alt\"})",
+          " * key - A string representing the key (e.g., \"s\" or \"return\")",
+          ""
+        ],
+        "desc" : "Builds a consistent string representation of a hotkey combination.",
+        "notes" : [
+          " * Modifier keys are sorted and converted to lowercase",
+          " * The key is converted to uppercase",
+          " * This is used internally to create consistent keys for the hotkeys table"
+        ],
+        "signature" : "Snapster:_keyname(mods, key)",
+        "type" : "Function",
+        "returns" : [
+          " * A standardized string representation of the hotkey (e.g., \"alt-cmd-S\")",
+          ""
+        ],
+        "name" : "_keyname",
+        "def" : "Snapster:_keyname(mods, key)"
+      },
+      {
+        "doc" : "Internal method that applies a list of layouts to the currently focused window.\n\nParameters:\n * layouts - A table of layout objects to apply in sequence\n\nNotes:\n * Each layout object in the list must have an apply() method that takes a window object\n * If showAlert is true, displays an alert with the window dimensions after applying layouts",
+        "stripped_doc" : [
+          "Internal method that applies a list of layouts to the currently focused window.",
+          ""
+        ],
+        "parameters" : [
+          " * layouts - A table of layout objects to apply in sequence",
+          ""
+        ],
+        "desc" : "Internal method that applies a list of layouts to the currently focused window.",
+        "notes" : [
+          " * Each layout object in the list must have an apply() method that takes a window object",
+          " * If showAlert is true, displays an alert with the window dimensions after applying layouts"
+        ],
+        "signature" : "Snapster:_apply(layouts)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "_apply",
+        "def" : "Snapster:_apply(layouts)"
+      },
+      {
+        "doc" : "Binds a hotkey to the given layout.\n\nParameters:\n * mapping - A table {mods, key} defining the hotkey\n * ... - A list of layout operations to apply\n\nNotes:\n * The layout operations will be applied in the order they are provided.",
+        "stripped_doc" : [
+          "Binds a hotkey to the given layout.",
+          ""
+        ],
+        "parameters" : [
+          " * mapping - A table {mods, key} defining the hotkey",
+          " * ... - A list of layout operations to apply",
+          ""
+        ],
+        "desc" : "Binds a hotkey to the given layout.",
+        "notes" : [
+          " * The layout operations will be applied in the order they are provided."
+        ],
+        "signature" : "Snapster:bind(mapping, width, height, anchors)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "bind",
+        "def" : "Snapster:bind(mapping, width, height, anchors)"
+      },
+      {
+        "doc" : "Returns the effective configuration for an application by combining default settings with app-specific overrides.\n\nParameters:\n * app - An hs.application object representing the application\n\nReturns:\n * A table containing the effective configuration settings for the application",
+        "stripped_doc" : [
+          "Returns the effective configuration for an application by combining default settings with app-specific overrides.",
+          ""
+        ],
+        "parameters" : [
+          " * app - An hs.application object representing the application",
+          ""
+        ],
+        "desc" : "Returns the effective configuration for an application by combining default settings with app-specific overrides.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster:getEffectiveConfig(app)",
+        "type" : "Method",
+        "returns" : [
+          " * A table containing the effective configuration settings for the application"
+        ],
+        "name" : "getEffectiveConfig",
+        "def" : "Snapster:getEffectiveConfig(app)"
+      },
+      {
+        "doc" : "Start Snapster\n\nReturns:\n * The Snapster object",
+        "stripped_doc" : [
+          "Start Snapster",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Start Snapster",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster:start()",
+        "type" : "Method",
+        "returns" : [
+          " * The Snapster object"
+        ],
+        "name" : "start",
+        "def" : "Snapster:start()"
+      },
+      {
+        "doc" : "Stops Snapster\n\nReturns:\n * The Snapster object",
+        "stripped_doc" : [
+          "Stops Snapster",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Stops Snapster",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The Snapster object"
+        ],
+        "name" : "stop",
+        "def" : "Snapster:stop()"
+      },
+      {
+        "doc" : "Unbinds a hotkey.\n\nParameters:\n * mapping - A table {mods, key} defining the hotkey\n\nReturns:\n * The Snapster object",
+        "stripped_doc" : [
+          "Unbinds a hotkey.",
+          ""
+        ],
+        "parameters" : [
+          " * mapping - A table {mods, key} defining the hotkey",
+          ""
+        ],
+        "desc" : "Unbinds a hotkey.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster:unbind(mapping)",
+        "type" : "Method",
+        "returns" : [
+          " * The Snapster object"
+        ],
+        "name" : "unbind",
+        "def" : "Snapster:unbind(mapping)"
+      },
+      {
+        "doc" : "Undoes the last window operation, restoring the previous window state.\n\nReturns:\n * The Snapster object",
+        "stripped_doc" : [
+          "Undoes the last window operation, restoring the previous window state.",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Undoes the last window operation, restoring the previous window state.",
+        "notes" : [
+
+        ],
+        "signature" : "Snapster:undo()",
+        "type" : "Method",
+        "returns" : [
+          " * The Snapster object"
+        ],
+        "name" : "undo",
+        "def" : "Snapster:undo()"
+      }
+    ],
+    "name" : "Snapster"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "UNKNOWN DESC",
+    "Constructor" : [
+
+    ],
+    "doc" : "Manage history of window frame changes",
+    "Method" : [
+      {
+        "doc" : "Creates a new WindowHistory instance.\n\nParameters:\n * maxSize - The maximum size of the history stack (defaults to 10).\n\nReturns:\n * A new WindowHistory instance",
+        "stripped_doc" : [
+          "Creates a new WindowHistory instance.",
+          ""
+        ],
+        "parameters" : [
+          " * maxSize - The maximum size of the history stack (defaults to 10).",
+          ""
+        ],
+        "desc" : "Creates a new WindowHistory instance.",
+        "notes" : [
+
+        ],
+        "signature" : "WindowHistory:new(maxSize)",
+        "type" : "Method",
+        "returns" : [
+          " * A new WindowHistory instance"
+        ],
+        "name" : "new",
+        "def" : "WindowHistory:new(maxSize)"
+      },
+      {
+        "doc" : "Records the current state of a window to the history stack.\n\nParameters:\n * win - An hs.window object to record the state of\n\nReturns:\n * The WindowHistory object for method chaining\n\nNotes:\n * If adding this entry exceeds the maximum history size, the oldest entry will be removed",
+        "stripped_doc" : [
+          "Records the current state of a window to the history stack.",
+          ""
+        ],
+        "parameters" : [
+          " * win - An hs.window object to record the state of",
+          ""
+        ],
+        "desc" : "Records the current state of a window to the history stack.",
+        "notes" : [
+          " * If adding this entry exceeds the maximum history size, the oldest entry will be removed"
+        ],
+        "signature" : "WindowHistory:push(win)",
+        "type" : "Method",
+        "returns" : [
+          " * The WindowHistory object for method chaining",
+          ""
+        ],
+        "name" : "push",
+        "def" : "WindowHistory:push(win)"
+      },
+      {
+        "doc" : "Restores a window to its previous state from the history stack.\n\nReturns:\n * The WindowHistory object for method chaining\n\nNotes:\n * Displays an alert if there's no more history to restore\n * Handles cases where the original window no longer exists",
+        "stripped_doc" : [
+          "Restores a window to its previous state from the history stack.",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Restores a window to its previous state from the history stack.",
+        "notes" : [
+          " * Displays an alert if there's no more history to restore",
+          " * Handles cases where the original window no longer exists"
+        ],
+        "signature" : "WindowHistory:pop()",
+        "type" : "Method",
+        "returns" : [
+          " * The WindowHistory object for method chaining",
+          ""
+        ],
+        "name" : "pop",
+        "def" : "WindowHistory:pop()"
+      },
+      {
+        "doc" : "Resets the window history, removing all stored states.\n\nReturns:\n * The WindowHistory object for method chaining",
+        "stripped_doc" : [
+          "Resets the window history, removing all stored states.",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Resets the window history, removing all stored states.",
+        "notes" : [
+
+        ],
+        "signature" : "WindowHistory:clear()",
+        "type" : "Method",
+        "returns" : [
+          " * The WindowHistory object for method chaining"
+        ],
+        "name" : "clear",
+        "def" : "WindowHistory:clear()"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Resets the window history, removing all stored states.\n\nReturns:\n * The WindowHistory object for method chaining",
+        "stripped_doc" : [
+          "Resets the window history, removing all stored states.",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Resets the window history, removing all stored states.",
+        "notes" : [
+
+        ],
+        "signature" : "WindowHistory:clear()",
+        "type" : "Method",
+        "returns" : [
+          " * The WindowHistory object for method chaining"
+        ],
+        "name" : "clear",
+        "def" : "WindowHistory:clear()"
+      },
+      {
+        "doc" : "Creates a new WindowHistory instance.\n\nParameters:\n * maxSize - The maximum size of the history stack (defaults to 10).\n\nReturns:\n * A new WindowHistory instance",
+        "stripped_doc" : [
+          "Creates a new WindowHistory instance.",
+          ""
+        ],
+        "parameters" : [
+          " * maxSize - The maximum size of the history stack (defaults to 10).",
+          ""
+        ],
+        "desc" : "Creates a new WindowHistory instance.",
+        "notes" : [
+
+        ],
+        "signature" : "WindowHistory:new(maxSize)",
+        "type" : "Method",
+        "returns" : [
+          " * A new WindowHistory instance"
+        ],
+        "name" : "new",
+        "def" : "WindowHistory:new(maxSize)"
+      },
+      {
+        "doc" : "Restores a window to its previous state from the history stack.\n\nReturns:\n * The WindowHistory object for method chaining\n\nNotes:\n * Displays an alert if there's no more history to restore\n * Handles cases where the original window no longer exists",
+        "stripped_doc" : [
+          "Restores a window to its previous state from the history stack.",
+          ""
+        ],
+        "parameters" : [
+
+        ],
+        "desc" : "Restores a window to its previous state from the history stack.",
+        "notes" : [
+          " * Displays an alert if there's no more history to restore",
+          " * Handles cases where the original window no longer exists"
+        ],
+        "signature" : "WindowHistory:pop()",
+        "type" : "Method",
+        "returns" : [
+          " * The WindowHistory object for method chaining",
+          ""
+        ],
+        "name" : "pop",
+        "def" : "WindowHistory:pop()"
+      },
+      {
+        "doc" : "Records the current state of a window to the history stack.\n\nParameters:\n * win - An hs.window object to record the state of\n\nReturns:\n * The WindowHistory object for method chaining\n\nNotes:\n * If adding this entry exceeds the maximum history size, the oldest entry will be removed",
+        "stripped_doc" : [
+          "Records the current state of a window to the history stack.",
+          ""
+        ],
+        "parameters" : [
+          " * win - An hs.window object to record the state of",
+          ""
+        ],
+        "desc" : "Records the current state of a window to the history stack.",
+        "notes" : [
+          " * If adding this entry exceeds the maximum history size, the oldest entry will be removed"
+        ],
+        "signature" : "WindowHistory:push(win)",
+        "type" : "Method",
+        "returns" : [
+          " * The WindowHistory object for method chaining",
+          ""
+        ],
+        "name" : "push",
+        "def" : "WindowHistory:push(win)"
+      }
+    ],
+    "name" : "WindowHistory"
+  }
+]
