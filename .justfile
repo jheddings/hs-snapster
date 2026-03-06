@@ -40,7 +40,7 @@ static-checks:
 
 # run static checks and unit tests
 preflight: static-checks
-  just test unit
+  @just test unit
   @echo "Preflight checks passed."
 
 # remove build artifacts

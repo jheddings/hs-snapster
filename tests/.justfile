@@ -2,19 +2,19 @@
 
 basedir := justfile_directory()
 
-# run all tests
-default: unit integration
-  @echo "All tests passed."
+# run default test suite
+default: unit
 
 # run all tests (alias)
-all: default
+all: unit integration
+  @echo "All tests passed."
 
 # run unit tests
 unit:
-  for test in {{basedir}}/tests/test_*.lua; do lua "$test"; done
+  cd "{{basedir}}" && for test in tests/test_*.lua; do lua "$test"; done
   @echo "Unit tests complete."
 
 # run integration tests (requires Hammerspoon)
 integration:
-  for test in {{basedir}}/tests/hs_*.lua; do hs "$test"; done
+  cd "{{basedir}}" && for test in tests/hs_*.lua; do hs "$test"; done
   @echo "Integration tests complete."
