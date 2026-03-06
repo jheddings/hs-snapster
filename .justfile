@@ -15,14 +15,14 @@ mod test "tests/.justfile"
 default: preflight build
 
 # generate documentation JSON
-build-docs:
+docs:
   mkdir -p "{{build_dir}}"
   hs -c "hs.doc.builder.genJSON('{{srcdir}}')" \
     | grep -v "^--" \
     > "{{build_dir}}/docs.json"
 
 # build the spoon and create distribution zip
-build: build-docs
+build: docs
   cp -av "{{srcdir}}/" "{{build_dir}}/"
   mkdir -p "{{basedir}}/dist"
   cd "{{basedir}}/build" && zip -9r "{{zip_dist}}" "{{appname}}.spoon"
