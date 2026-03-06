@@ -1,6 +1,7 @@
 # test tasks for hs-snapster
 
 basedir := justfile_directory()
+libdir := basedir / "lib"
 
 # run default test suite
 default: unit
@@ -11,7 +12,7 @@ all: unit integration
 
 # run unit tests
 unit:
-  cd "{{basedir}}" && for test in tests/test_*.lua; do lua "$test"; done
+  cd "{{basedir}}" && for test in tests/test_*.lua; do LUA_PATH="{{libdir}}/?.lua;;" lua "$test"; done
   @echo "Unit tests complete."
 
 # run integration tests (requires Hammerspoon)
