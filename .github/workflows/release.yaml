@@ -1,0 +1,29 @@
+name: Release
+run-name: Release ${{ github.ref_name }}
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install just
+        uses: extractions/setup-just@v3
+
+      - name: Build spoon zip
+        run: just build
+
+      - name: Create release
+        run: |
+          gh release create ${{ github.ref_name }} \
+            --title "${{ github.event.repository.name }}-${{ github.ref_name }}" \
+            --generate-notes --draft dist/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

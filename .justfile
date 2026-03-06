@@ -11,28 +11,28 @@ zip_dist := basedir / "dist" / appname + "-" + appver + ".zip"
 
 mod test "tests/.justfile"
 
-# build docs, package spoon, and create zip
+# run checks and build distributable zip
 default: preflight build
 
-# generate documentation JSON
+# generate documentation JSON into src
 docs:
-  mkdir -p "{{build_dir}}"
   hs -c "hs.doc.builder.genJSON('{{srcdir}}')" \
     | grep -v "^--" \
-    > "{{build_dir}}/docs.json"
+    > "{{srcdir}}/docs.json"
+  git add "{{srcdir}}/docs.json"
+  git diff --quiet --cached "{{srcdir}}/docs.json" \
+    || git commit -m "Update docs for v{{appver}}"
 
-# build the spoon and create distribution zip
-build: docs
+# create distributable spoon zip
+build:
+  mkdir -p "{{build_dir}}" "{{basedir}}/dist"
   cp -av "{{srcdir}}/" "{{build_dir}}/"
-  mkdir -p "{{basedir}}/dist"
   cd "{{basedir}}/build" && zip -9r "{{zip_dist}}" "{{appname}}.spoon"
 
-# tag, push, and create a GitHub draft release
-release: preflight build
+# tag and push to trigger the release workflow
+release: preflight docs
   git tag "v{{appver}}" main
-  git push origin "v{{appver}}"
-  gh release create --draft --title "{{appname}}-{{appver}}" --generate-notes \
-    --verify-tag "v{{appver}}" "{{zip_dist}}"
+  git push origin main "v{{appver}}"
 
 # run static analysis checks
 check:
