@@ -13,7 +13,7 @@ local WindowHistory = dofile(hs.spoons.resourcePath("undo.lua"))
 
 -- Metadata
 obj.name = "Snapster"
-obj.version = "1.3rc2"
+obj.version = "1.3"
 obj.author = "Jason Heddings"
 obj.license = "MIT"
 
