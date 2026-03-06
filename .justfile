@@ -35,11 +35,11 @@ release: preflight build
     --verify-tag "v{{appver}}" "{{zip_dist}}"
 
 # run static analysis checks
-static-checks:
+check:
   @echo "Static checks passed."
 
 # run static checks and unit tests
-preflight: static-checks
+preflight: check
   @just test unit
   @echo "Preflight checks passed."
 
