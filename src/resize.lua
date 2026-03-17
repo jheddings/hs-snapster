@@ -10,52 +10,21 @@
 ---  * rows, cols - The current terminal dimensions, or nil, nil on failure
 local function getTerminalDimensions(win)
     local pid = win:application():pid()
-    local tty = hs.execute(string.format(
-        "ps -axo tt=,ppid= | awk '$2==%d && $1!=\"?\" {print $1; exit}'", pid
-    )):match("^%s*(.-)%s*$")
+    local result = hs.execute(string.format(
+        "ps -axo tt=,ppid= | awk '$2==%d && $1!=\"??\" {print $1; exit}'", pid
+    ))
 
+    if not result then return nil, nil end
+    local tty = result:match("^%s*(.-)%s*$")
     if not tty or tty == "" then return nil, nil end
 
-    -- Query TIOCGWINSZ for both character and pixel dimensions.
-    -- ws_xpixel/ws_ypixel give total content size in physical pixels,
-    -- from which we can derive the true cell size independently of the
-    -- (possibly stale) row/col count.
-    local result = hs.execute(string.format(
-        "python3 -c \"import fcntl,termios,struct; " ..
-        "f=open('/dev/tty%s','rb'); " ..
-        "w=struct.unpack('HHHH',fcntl.ioctl(f,termios.TIOCGWINSZ,b'\\\\0'*8)); " ..
-        "print(w[0],w[1],w[2],w[3]); f.close()\"", tty))
+    result = hs.execute(string.format("stty -f /dev/tty%s size", tty))
+    if not result then return nil, nil end
 
-    local rows, cols, xpx, ypx = result:match("(%d+)%s+(%d+)%s+(%d+)%s+(%d+)")
-    rows, cols = tonumber(rows), tonumber(cols)
-    xpx, ypx = tonumber(xpx), tonumber(ypx)
-
-    if xpx and ypx and xpx > 0 and ypx > 0 and cols > 0 and rows > 0 then
-        -- Convert physical pixels to logical pixels using display scale
-        local scale = win:screen():currentMode().scale or 1
-        local cell_w = (xpx / cols) / scale
-        local cell_h = (ypx / rows) / scale
-        spoon.Snapster.logger.i(string.format(
-            "TIOCGWINSZ: %dx%d chars, %dx%d px, scale=%.1f => cell %.3fx%.3f",
-            cols, rows, xpx, ypx, scale, cell_w, cell_h))
-        return rows, cols, cell_w, cell_h
-    end
-
-    -- Fall back to character dimensions only
-    return rows, cols
+    local rows, cols = result:match("(%d+)%s+(%d+)")
+    return tonumber(rows), tonumber(cols)
 end
 
---- getScrollAreaHeight(win)
---- Function
---- Returns the height of the terminal's scroll area (AXScrollArea) via the
---- accessibility tree, used to exclude chrome (tab bar, etc.) from the
---- row height calculation.
----
---- Parameters:
----  * win - An hs.window object for the terminal window
----
---- Returns:
----  * The height of the scroll area, or nil if not found
 --- getContentHeight(win)
 --- Function
 --- Returns the height of the terminal's content area via the accessibility
@@ -108,7 +77,7 @@ end
 --- Returns:
 ---  * A new FrameResizer instance
 
-FrameResizer = LayoutOperation:new()
+FrameResizer = LayoutManager.Operation:new()
 FrameResizer.__index = FrameResizer
 
 function FrameResizer:new(width, height)
@@ -141,30 +110,23 @@ function FrameResizer:apply(frame, context)
     logger.d("FrameResizer:apply(", self.width, ", ", self.height, ")")
 
     if config and (config.rows or config.cols) then
-        local cur_rows, cur_cols, cell_w, cell_h = getTerminalDimensions(context)
+        local cur_rows, cur_cols = getTerminalDimensions(context)
 
-        if not (cell_w and cell_h) then
-            -- TIOCGWINSZ pixel fields unavailable; derive from character dimensions
-            if cur_rows and cur_cols then
-                local contentH = getContentHeight(context)
-                local chrome_h = contentH and (frame.h - contentH) or 0
-                cell_w = frame.w / cur_cols
-                cell_h = (frame.h - chrome_h) / cur_rows
-                logger.d("Measured cell size:", cell_w, "x", cell_h)
-            else
-                logger.w("Could not determine terminal dimensions for rows/cols resize")
-            end
-        end
-
-        if cell_w and cell_h then
+        if cur_rows and cur_cols then
             local contentH = getContentHeight(context)
             local chrome_h = contentH and (frame.h - contentH) or 0
+            local cell_w = frame.w / cur_cols
+            local cell_h = (frame.h - chrome_h) / cur_rows
+            logger.d("Measured cell size:", cell_w, "x", cell_h)
+
             if config.cols then
                 frame.w = math.ceil(config.cols * cell_w)
             end
             if config.rows then
                 frame.h = math.ceil(config.rows * cell_h + chrome_h)
             end
+        else
+            logger.w("Could not determine terminal dimensions for rows/cols resize")
         end
     else
         if self.width then

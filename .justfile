@@ -8,6 +8,7 @@ appver := `grep -m1 '^obj.version' src/init.lua | sed -e 's/.*"\(.*\)"/\1/'`
 
 build_dir := basedir / "build" / appname + ".spoon"
 zip_dist := basedir / "dist" / appname + "-" + appver + ".zip"
+install_dir := home_directory() / ".hammerspoon/Spoons" / appname + ".spoon"
 
 mod test "tests/.justfile"
 
@@ -33,6 +34,11 @@ build:
 release: preflight docs
   git tag "v{{appver}}" main
   git push origin main "v{{appver}}"
+
+# install spoon to ~/.hammerspoon/Spoons
+install:
+  mkdir -p "{{install_dir}}"
+  cp -av "{{srcdir}}/" "{{install_dir}}/"
 
 # run static analysis checks
 check:
