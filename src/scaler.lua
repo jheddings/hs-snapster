@@ -2,7 +2,7 @@
 --- Class
 --- Handles scaling of window frames.
 
-FrameScaler = LayoutOperation:new()
+FrameScaler = LayoutManager.Operation:new()
 FrameScaler.__index = FrameScaler
 
 --- FrameScaler:new(width, height)

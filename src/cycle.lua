@@ -7,7 +7,7 @@
 --- each step. If a match is found, the next step is applied (wrapping around).
 --- If no match is found (e.g., the window was manually moved), step 1 is applied.
 
-CycleOp = LayoutOperation:new()
+CycleOp = LayoutManager.Operation:new()
 CycleOp.__index = CycleOp
 
 local TOLERANCE = 5
