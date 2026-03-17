@@ -1,7 +1,8 @@
---- === FrameScaler ===
+--- FrameScaler
+--- Class
 --- Handles scaling of window frames.
 
-FrameScaler = LayoutManager.Operation:new()
+FrameScaler = LayoutOperation:new()
 FrameScaler.__index = FrameScaler
 
 --- FrameScaler:new(width, height)
@@ -78,6 +79,11 @@ FrameScaler.HALF_WIDTH = FrameScaler:new(0.5, 1)
 --- Predefined scaler for 1/3 screen width, full height.
 FrameScaler.THIRD_WIDTH = FrameScaler:new(0.333, 1)
 
+--- FrameScaler.TWO_THIRDS_WIDTH
+--- Variable
+--- Predefined scaler for 2/3 screen width, full height.
+FrameScaler.TWO_THIRDS_WIDTH = FrameScaler:new(0.667, 1)
+
 --- FrameScaler.QUARTER_WIDTH
 --- Variable
 --- Predefined scaler for 1/4 screen width, full height.
@@ -87,6 +93,16 @@ FrameScaler.QUARTER_WIDTH = FrameScaler:new(0.25, 1)
 --- Variable
 --- Predefined scaler for 1/2 screen height, full width.
 FrameScaler.HALF_HEIGHT = FrameScaler:new(1, 0.5)
+
+--- FrameScaler.THIRD_HEIGHT
+--- Variable
+--- Predefined scaler for 1/3 screen height, full width.
+FrameScaler.THIRD_HEIGHT = FrameScaler:new(1, 0.333)
+
+--- FrameScaler.TWO_THIRDS_HEIGHT
+--- Variable
+--- Predefined scaler for 2/3 screen height, full width.
+FrameScaler.TWO_THIRDS_HEIGHT = FrameScaler:new(1, 0.667)
 
 --- FrameScaler.FULL_SCREEN
 --- Variable
